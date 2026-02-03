@@ -779,7 +779,74 @@ nav a:hover::after {
         0 1px 0 rgba(0, 0, 0, 0.8),
        
 }
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2.5rem;
+    color: white;
+    transform: translateY(0);
+    opacity: 1;
+    text-align: left;
+}
 
+/* SOLO TEXTO - Eliminar botones/cuadros */
+.carousel-overlay h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    
+    /* Solo texto con sombras para resaltar */
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.8),
+        0 4px 8px rgba(0, 0, 0, 0.6),
+        0 6px 12px rgba(0, 0, 0, 0.4);
+    
+    /* Eliminar todo el fondo/botón */
+    display: block;
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.carousel-overlay p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 600px;
+    
+    /* Solo texto con sombras para resaltar */
+    text-shadow: 
+        0 1px 3px rgba(0, 0, 0, 0.8),
+        0 3px 6px rgba(0, 0, 0, 0.6),
+        0 5px 9px rgba(0, 0, 0, 0.4);
+    
+    /* Eliminar todo el fondo/botón */
+    display: block;
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+}
+
+/* Efecto sutil al pasar el mouse */
+.carousel-overlay h3:hover,
+.carousel-overlay p:hover {
+    text-shadow: 
+        0 2px 5px rgba(0, 0, 0, 0.9),
+        0 4px 10px rgba(0, 0, 0, 0.7),
+        0 6px 15px rgba(0, 0, 0, 0.5);
+    transition: text-shadow 0.3s ease;
+}
 
 /* Características mejoradas */
 .property-features {
@@ -2496,7 +2563,7 @@ footer::before {
     <header>
         <div class="header-content">
         <a href="#" class="logo">
-            <img src="apex.png" alt="Logo de la empresa" style="height: 60px;"class="logo-img">
+            <img src="apex.png" alt="Logo de la empresa" style="height: 50px;"class="logo-img">
         </a>
         <nav>
             <a href="#exterior">Exterior</a>
