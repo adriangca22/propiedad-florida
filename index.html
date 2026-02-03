@@ -1,0 +1,3064 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CASA EN VENTA - 3862 Resting Robin Ave, Bartow, FL</title>
+    <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #1a1a1a;
+    --secondary: #f5f5f5;
+    --accent: #0066cc;
+    --accent-light: #e8f2ff;
+    --neutral: #666666;
+    --border: rgba(0, 0, 0, 0.08);
+    --glass: rgba(255, 255, 255, 0.95);
+    --shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--secondary);
+    color: var(--primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== ANIMATED BACKGROUND CON TRANSPARENCIA LEVE ===== */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf1 100%);
+    z-index: -1;
+    overflow: hidden;
+}
+
+
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.header-content {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    z-index: 1002;
+}
+
+.logo-img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
+}
+
+.logo:hover .logo-text {
+    color: var(--accent);
+}
+
+/* ===== BOTÓN HAMBURGUESA ===== */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1002;
+    position: relative;
+}
+
+.hamburger-line {
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== NAVEGACIÓN DESKTOP ===== */
+nav {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.cta-button {
+    background: var(--accent);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid var(--accent);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.cta-button:hover {
+    background: transparent;
+    color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+/* ===== MENÚ MÓVIL ===== */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 1001;
+    padding: 100px 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+    border-left: 1px solid var(--border);
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: var(--accent);
+    transform: translateX(10px);
+}
+
+.mobile-menu .cta-button {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Overlay para el menú móvil */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)), 
+                url('CASITA.jpg') center/cover no-repeat;
+    padding: 3rem 2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 102, 204, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    33% {
+        transform: translateY(20px) rotate(120deg);
+    }
+    66% {
+        transform: translateY(10px) rotate(240deg);
+    }
+}
+
+.hero-content {
+    max-width: 900px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+    padding: 3rem;
+   
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 8vw, 4.2rem);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    color: white;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.hero h1::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    border-radius: 2px;
+    animation: lineGrow 1.2s ease-out 0.5s forwards;
+}
+
+@keyframes lineGrow {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        width: 100px;
+        opacity: 1;
+    }
+}
+
+.hero p {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 2.5rem;
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: white;
+    padding: 1.1rem 2.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid var(--accent);
+    cursor: pointer;
+    border: none;
+    font-size: 1.05rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(0, 102, 204, 0.5);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 1.1rem 2.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid white;
+    cursor: pointer;
+    font-size: 1.05rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: left 0.4s;
+    z-index: -1;
+}
+
+.btn-secondary:hover::before {
+    left: 0;
+}
+
+.btn-secondary:hover {
+    color: var(--accent);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== CAROUSEL SECTION ===== */
+.carousel-section {
+    padding: 6rem 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-section h1.main-title {
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw, 3.2rem);
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 2rem;
+    animation: slideInFromBottom 1s ease-out 0.2s both;
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-section h1.main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    border-radius: 2px;
+    animation: widthGrow 1.2s ease-out 0.6s forwards;
+}
+
+.carousel-section .section-title {
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 0.8rem;
+    color: #333;
+    font-weight: 600;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+    position: relative;
+}
+
+.carousel-section .section-title::before,
+.carousel-section .section-title::after {
+    content: '◈';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--accent);
+    font-size: 1.2rem;
+    opacity: 0;
+    animation: fadeInDelayed 1s ease-out 0.8s forwards;
+}
+
+@keyframes fadeInDelayed {
+    to { opacity: 0.6; }
+}
+
+.carousel-section .section-title::before {
+    left: 30%;
+}
+
+.carousel-section .section-title::after {
+    right: 30%;
+}
+
+.carousel-section .section-subtitle {
+    text-align: center;
+    color: var(--neutral);
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    font-weight: 300;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+    position: relative;
+    padding: 1.5rem 0;
+}
+
+.carousel-section .section-subtitle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    animation: lineExpand 1.5s ease-out 0.7s forwards;
+}
+
+@keyframes lineExpand {
+    from { width: 0; opacity: 0; }
+    to { width: 60px; opacity: 1; }
+}
+
+/* Contenedor principal */
+.properties-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+/* Títulos de secciones específicas */
+.carousel-container-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 600;
+    padding-bottom: 0.8rem;
+    border-bottom: 2px solid var(--border);
+}
+
+.area-description {
+    text-align: center;
+    color: var(--neutral);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contenedores de carrusel */
+.exterior-carousel-container,
+.interior-carousel-container {
+    position: relative;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: white;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.exterior-carousel-container:hover,
+.interior-carousel-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border-color: rgba(0, 102, 204, 0.1);
+}
+
+/* Títulos de carrusel */
+.exterior-title,
+.interior-title {
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--primary);
+    font-weight: 600;
+    margin: 0 0 1.5rem 0;
+    padding: 0;
+    position: relative;
+}
+
+.exterior-title::after,
+.interior-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    border-radius: 2px;
+}
+
+/* Carruseles */
+.exterior-carousel,
+.interior-carousel {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 16px;
+    background-color: #f8f8f8;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.exterior-slide,
+.interior-slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exterior-slide.active,
+.interior-slide.active {
+    opacity: 1;
+    position: relative;
+}
+
+.exterior-slide img,
+.interior-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 10s ease;
+}
+
+.exterior-slide.active img,
+.interior-slide.active img {
+    transform: scale(1.05);
+}
+
+/* Overlay mejorado */
+.carousel-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    padding: 2.5rem;
+    color: white;
+    transform: translateY(0);
+    opacity: 1;
+    
+}
+
+.carousel-overlay h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.carousel-overlay p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 600px;
+}
+
+/* Características mejoradas */
+.property-features {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+}
+
+.feature-tag {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    transition: all 0.3s ease;
+}
+
+.feature-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Botones de navegación mejorados */
+.exterior-nav,
+.interior-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.92);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.4rem;
+    color: var(--primary);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(8px);
+}
+
+.exterior-nav:hover,
+.interior-nav:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.15);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.exterior-prev,
+.interior-prev {
+    left: 20px;
+}
+
+.exterior-next,
+.interior-next {
+    right: 20px;
+}
+
+/* Dots mejorados */
+.exterior-dots,
+.interior-dots {
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 100;
+}
+
+.exterior-dot,
+.interior-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.exterior-dot.active,
+.interior-dot.active {
+    background: white;
+    width: 36px;
+    border-radius: 6px;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* ===== DETALLES DE PROPIEDAD ===== */
+.property-details {
+    background: white;
+    border-radius: 24px;
+    padding: 4rem;
+    margin-top: 4rem;
+    box-shadow: var(--shadow);
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.property-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.property-title {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.property-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    border-radius: 2px;
+}
+
+.property-address {
+    font-size: 1.2rem;
+    color: var(--neutral);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.property-price {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--accent);
+    background: var(--accent-light);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    border: 2px solid rgba(0, 102, 204, 0.1);
+    transition: all 0.3s ease;
+}
+
+.property-price:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
+}
+
+.property-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 3.5rem;
+}
+
+.info-item {
+    text-align: center;
+    padding: 1.8rem;
+    background: var(--accent-light);
+    border-radius: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 102, 204, 0.1);
+}
+
+.info-item:hover {
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 102, 204, 0.25);
+    background: white;
+    border-color: rgba(0, 102, 204, 0.2);
+}
+
+.info-icon {
+    font-size: clamp(2rem, 4vw, 2.4rem);
+    margin-bottom: 1.2rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.info-item:hover .info-icon {
+    transform: scale(1.2);
+}
+
+.info-label {
+    font-size: 0.95rem;
+    color: var(--neutral);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.property-description {
+    margin-bottom: 3.5rem;
+}
+
+.property-description h3 {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    margin-bottom: 1.2rem;
+    color: var(--primary);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.property-description h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    border-radius: 2px;
+}
+
+.property-description p {
+    color: var(--neutral);
+    line-height: 1.8;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    margin-bottom: 1.2rem;
+    font-weight: 300;
+}
+
+/* Características de propiedad */
+.property-features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin-bottom: 2.5rem;
+}
+
+.property-feature {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.5rem;
+    background: var(--secondary);
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.property-feature:hover {
+    transform: translateX(8px) translateY(-5px);
+    background: var(--accent-light);
+    box-shadow: 0 10px 30px rgba(0, 102, 204, 0.15);
+    border-color: rgba(0, 102, 204, 0.1);
+}
+
+.property-feature-icon {
+    font-size: 1.8rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.property-feature:hover .property-feature-icon {
+    transform: scale(1.1) rotate(10deg);
+    background: var(--accent);
+    color: white;
+}
+
+.property-feature-text {
+    flex: 1;
+}
+
+.property-feature-text h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.property-feature-text p {
+    font-size: 0.95rem;
+    color: var(--neutral);
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+/* ===== STATS SECTION ===== */
+.stats {
+    background: linear-gradient(135deg, var(--primary) 0%, #2a2a2a 100%);
+    color: white;
+    padding: 5rem 2rem;
+    margin: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.stats-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.5rem;
+    text-align: center;
+}
+
+.stat {
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.stat:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    background: linear-gradient(135deg, #0066cc, #00c4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-feature-settings: "tnum";
+}
+
+.stat-label {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact {
+    padding: 7rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-text h2 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    margin-bottom: 1.2rem;
+    animation: fadeInUp 0.8s ease-out 0.5s both;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.contact-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    border-radius: 2px;
+}
+
+.contact-text p {
+    color: var(--neutral);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+    font-weight: 300;
+}
+
+/* ===== SECCIÓN DE REDES SOCIALES ===== */
+.social-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    animation: fadeInUp 0.8s ease-out 0.7s both;
+}
+
+.social-title {
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    margin-bottom: 2rem;
+    color: var(--primary);
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.social-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    border-radius: 2px;
+}
+
+.social-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #4a90e2);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.social-item:hover::before {
+    transform: scaleX(1);
+}
+
+.social-item:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 24px 60px rgba(0, 102, 204, 0.2);
+    border-color: rgba(0, 102, 204, 0.3);
+}
+
+.social-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.social-item:hover .social-icon {
+    transform: scale(1.15) rotate(10deg);
+}
+
+/* Colores específicos para cada red social */
+.whatsapp-bg {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+.email-bg {
+    background: linear-gradient(135deg, #D44638, #EA4335);
+}
+
+.phone-bg {
+    background: linear-gradient(135deg, var(--accent), #4a90e2);
+}
+
+.social-item h4 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 0.8rem;
+    color: var(--primary);
+    text-align: center;
+    font-weight: 600;
+}
+
+.social-item p {
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    color: var(--neutral);
+    text-align: center;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.contact-info {
+    margin-top: 3.5rem;
+    padding: 2.5rem;
+    background: var(--accent-light);
+    border-radius: 20px;
+    text-align: center;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+    border: 1px solid rgba(0, 102, 204, 0.1);
+}
+
+.contact-info h3 {
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.contact-info p {
+    color: var(--neutral);
+    margin-bottom: 0.8rem;
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    font-weight: 300;
+}
+
+.hours {
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+    color: var(--accent) !important;
+    font-weight: 600;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 102, 204, 0.2);
+}
+
+/* ===== FOOTER CON ICONOS ===== */
+footer {
+    background: var(--primary);
+    color: white;
+    padding: 5rem 2rem 3rem;
+    animation: fadeIn 1s ease-out 0.9s both;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+/* Iconos del footer */
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2.5rem 0;
+    flex-wrap: wrap;
+}
+
+.footer-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.footer-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 2rem;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: clamp(0.9rem, 1.8vw, 1rem);
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+    .carousel-section {
+        padding: 5rem 1.5rem;
+    }
+    
+    .exterior-carousel,
+    .interior-carousel {
+        height: 450px;
+    }
+    
+    .hero {
+        min-height: 70vh;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        height: 70px;
+    }
+    
+    .hero {
+        margin-top: 70px;
+        min-height: calc(100vh - 70px);
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero-content {
+        padding: 2rem;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2.2rem, 6vw, 3rem);
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 1rem 2.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Botón hamburguesa aparece */
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    /* Navegación desktop se oculta */
+    nav {
+        display: none;
+    }
+    
+    header {
+        padding: 0.8rem 1.5rem;
+        height: 60px;
+    }
+
+    .hero {
+        margin-top: 60px;
+        min-height: calc(100vh - 60px);
+    }
+
+    .logo-img {
+        height: 35px;
+    }
+
+    .hero {
+        padding: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+    }
+
+    .carousel-section {
+        padding: 4rem 1rem;
+    }
+    
+    .carousel-section h1.main-title {
+        font-size: 2.2rem;
+    }
+    
+    .carousel-section .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .carousel-section .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .carousel-container-title {
+        font-size: 1.5rem;
+    }
+
+    .exterior-carousel-container,
+    .interior-carousel-container {
+        padding: 1.8rem;
+    }
+    
+    .exterior-title,
+    .interior-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .area-description {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .exterior-carousel,
+    .interior-carousel {
+        height: 350px;
+    }
+    
+    .carousel-overlay {
+        padding: 1.5rem;
+    }
+    
+    .carousel-overlay h3 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 0.95rem;
+    }
+    
+    .exterior-nav,
+    .interior-nav {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+    }
+
+    .property-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2rem;
+    }
+
+    .property-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .contact {
+        padding: 4rem 1.5rem;
+    }
+
+    footer {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .property-details {
+        padding: 2.5rem 1.8rem;
+        margin: 2.5rem auto;
+    }
+
+    .property-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+    }
+
+    .info-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .property-features-list {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .social-icons {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .social-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .social-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+    
+    .footer-icons {
+        gap: 1.5rem;
+    }
+    
+    .footer-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        padding: 0.7rem 1rem;
+        height: 55px;
+    }
+
+    .logo-img {
+        height: 30px;
+    }
+
+    .cta-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .hero {
+        margin-top: 55px;
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-content {
+        padding: 1.5rem;
+    }
+
+    .carousel-section h1.main-title {
+        font-size: 1.8rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .carousel-section .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .carousel-section .section-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2.5rem;
+        padding: 1rem 0;
+    }
+
+    .properties-container {
+        gap: 3.5rem;
+    }
+    
+    .exterior-carousel,
+    .interior-carousel {
+        height: 300px;
+    }
+    
+    .carousel-overlay h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .feature-tag {
+        font-size: 0.85rem;
+        padding: 0.5rem 0.9rem;
+    }
+
+    .carousel-section {
+        padding: 3rem 1rem;
+    }
+
+    .exterior-carousel-container,
+    .interior-carousel-container {
+        padding: 1.5rem;
+    }
+
+    .exterior-nav,
+    .interior-nav {
+        width: 38px;
+        height: 38px;
+        font-size: 1.1rem;
+    }
+
+    .exterior-prev,
+    .interior-prev {
+        left: 10px;
+    }
+
+    .exterior-next,
+    .interior-next {
+        right: 10px;
+    }
+
+    .carousel-overlay {
+        padding: 1.2rem;
+    }
+
+    .exterior-dots,
+    .interior-dots {
+        bottom: 15px;
+        gap: 8px;
+    }
+
+    .exterior-dot,
+    .interior-dot {
+        width: 10px;
+        height: 10px;
+        border-width: 1.5px;
+    }
+
+    .exterior-dot.active,
+    .interior-dot.active {
+        width: 28px;
+    }
+
+    .property-info-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .info-item {
+        padding: 1.2rem;
+    }
+
+    .social-icons {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .stat {
+        padding: 1.5rem 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .contact-content {
+        gap: 3rem;
+    }
+    
+    /* Footer ajustado para móvil */
+    .footer-icons {
+        gap: 1rem;
+    }
+    
+    .footer-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+    
+    /* Menú móvil más pequeño */
+    .mobile-menu {
+        width: 280px;
+        padding: 90px 1.5rem 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        height: 50px;
+    }
+    
+    .hero {
+        margin-top: 50px;
+    }
+    
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+    
+    .hero p {
+        font-size: 0.9rem;
+    }
+    
+    .exterior-carousel,
+    .interior-carousel {
+        height: 250px;
+    }
+    
+    .carousel-overlay {
+        padding: 1rem;
+    }
+    
+    .carousel-overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 0.85rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .property-details {
+        padding: 1.8rem 1.2rem;
+    }
+    
+    footer {
+        padding: 2.5rem 1rem 1.5rem;
+    }
+    
+    .footer-icons {
+        gap: 0.8rem;
+    }
+    
+    .footer-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    
+    /* Menú móvil aún más pequeño */
+    .mobile-menu {
+        width: 260px;
+        padding: 80px 1.2rem 2rem;
+    }
+    
+    .mobile-menu a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Smooth transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Clase para imágenes fluidas */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--accent), #4a90e2);
+    border-radius: 10px;
+    border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0052a3, #3a7bc8);
+}
+    </style>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg" id="animatedBg"></div>
+
+    <!-- Menú móvil -->
+    <style>
+      /* ===== HEADER RESPONSIVE MEJORADO ===== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 0.8rem 1.5rem; /* Reducido en mobile */
+        z-index: 1000;
+        border-bottom: 1px solid var(--border);
+        height: 60px; /* Fijo en mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slideDown 0.8s ease-out;
+    }
+
+    .header-content {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ===== LOGO RESPONSIVE ===== */
+    .logo-img {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .logo-text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--primary);
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+    }
+
+    /* ===== BOTÓN HAMBURGUESA ===== */
+    .hamburger-menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1002;
+        position: relative;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .hamburger-menu-line {
+        width: 100%;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* ===== HERO AJUSTADO ===== */
+    .hero {
+        margin-top: 60px; /* Igual que altura del header */
+        min-height: calc(100vh - 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)), 
+                    url('CASITA.jpg') center/cover no-repeat;
+        padding: 2rem 1rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* ===== MEDIA QUERIES PARA MOBILE ===== */
+    @media (max-width: 768px) {
+        .hamburger-menu-btn {
+            display: flex;
+        }
+        
+        nav {
+            display: none !important;
+        }
+        
+        /* Header más compacto */
+        header {
+            height: 55px;
+            padding: 0.6rem 1rem;
+        }
+        
+        /* Hero ajustado al header */
+        .hero {
+            margin-top: 55px;
+            min-height: calc(100vh - 55px);
+            padding: 1.5rem 1rem;
+        }
+        
+        /* Logo más pequeño */
+        .logo-img {
+            height: 35px;
+        }
+        
+        .logo-text {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        header {
+            height: 50px;
+            padding: 0.5rem 0.8rem;
+        }
+        
+        .hero {
+            margin-top: 50px;
+            min-height: calc(100vh - 50px);
+            padding: 1rem;
+        }
+        
+        .logo-img {
+            height: 30px;
+        }
+        
+        .hamburger-menu-btn {
+            width: 28px;
+            height: 20px;
+        }
+        
+        .hamburger-menu-line {
+            height: 2.5px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        header {
+            height: 48px;
+        }
+        
+        .hero {
+            margin-top: 48px;
+        }
+        
+        .logo-img {
+            height: 28px;
+        }
+        
+        .hamburger-menu-btn {
+            width: 26px;
+            height: 18px;
+        }
+    }
+
+    /* ===== MENÚ MÓVIL (igual que antes) ===== */
+    .mobile-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    .mobile-nav-overlay.overlay-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        z-index: 1000;
+        padding: 70px 1.5rem 2rem; /* Top padding reducido */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: right 0.4s ease;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+        border-left: 1px solid var(--border);
+        overflow-y: auto;
+    }
+    .mobile-nav-menu.menu-active {
+        right: 0;
+    }
+
+    .mobile-nav-link {
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    .mobile-nav-link:hover {
+        color: var(--accent);
+        background: var(--accent-light);
+    }
+
+    .mobile-nav-cta {
+        background: var(--accent);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--accent);
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .mobile-nav-cta:hover {
+        background: transparent;
+        color: var(--accent);
+    }
+
+
+    </style>
+
+    <!-- HEADER ORIGINAL -->
+    <header>
+        <div class="header-content">
+        <a href="#" class="logo">
+            <img src="apex.png" alt="Logo de la empresa" class="logo-img">
+        </a>
+        <nav>
+            <a href="#exterior">Exterior</a>
+            <a href="#interior">Interior</a>
+            <a href="#details">Detalles</a>
+            <a href="#contact" class="cta-button">Contactar</a>
+        </nav>
+    </div>
+    </header>
+<!-- En el header, después del logo -->
+<button class="hamburger-menu-btn" id="hamburgerBtn">
+    <span class="hamburger-menu-line"></span>
+    <span class="hamburger-menu-line"></span>
+    <span class="hamburger-menu-line"></span>
+</button>
+
+<!-- Al final del body, antes de cerrar </body> -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<div class="mobile-nav-menu" id="mobileMenu">
+    <a href="#exterior" class="mobile-nav-link">Exterior</a>
+    <a href="#interior" class="mobile-nav-link">Interior</a>
+    <a href="#detalles" class="mobile-nav-link">Detalles</a>
+    <a href="#contacto" class="mobile-nav-link">Contactar</a>
+    <a href="#" class="mobile-nav-cta">Contactar Ahora</a>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    
+    if (hamburgerBtn && mobileMenu && mobileOverlay) {
+        // Abrir/cerrar menú
+        hamburgerBtn.addEventListener('click', function() {
+            this.classList.toggle('hamburger-active');
+            mobileMenu.classList.toggle('menu-active');
+            mobileOverlay.classList.toggle('overlay-active');
+            document.body.style.overflow = mobileMenu.classList.contains('menu-active') ? 'hidden' : '';
+        });
+        
+        // Cerrar menú al hacer clic en overlay
+        mobileOverlay.addEventListener('click', function() {
+            hamburgerBtn.classList.remove('hamburger-active');
+            mobileMenu.classList.remove('menu-active');
+            this.classList.remove('overlay-active');
+            document.body.style.overflow = '';
+        });
+        
+        // Cerrar menú al hacer clic en enlace
+        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-cta');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerBtn.classList.remove('hamburger-active');
+                mobileMenu.classList.remove('menu-active');
+                mobileOverlay.classList.remove('overlay-active');
+                document.body.style.overflow = '';
+            });
+        });
+        
+        // Cerrar menú con tecla ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && mobileMenu.classList.contains('menu-active')) {
+                hamburgerBtn.classList.remove('hamburger-active');
+                mobileMenu.classList.remove('menu-active');
+                mobileOverlay.classList.remove('overlay-active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+});
+</script>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Casa en Venta - Bartow, FL</h1>
+            <p>Hermosa casa nueva de 4 habitaciones, 3.5 baños en Bartow, Florida. Construida en 2023 con acabados de lujo y todas las comodidades modernas.</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="document.getElementById('details').scrollIntoView({behavior: 'smooth'})">Ver Detalles</button>
+                <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Agendar Visita</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAROUSEL SECTION -->
+    <section class="carousel-section" id="features">
+        <h1 class="main-title">PROPIEDAD EN VENTA</h1>
+        <h2 class="section-title">3862 Resting Robin Ave, Bartow, FL 33830</h2>
+        <p class="section-subtitle">Casa nueva de 4 habitaciones, 3.5 baños construida en 2023</p>
+        
+        <div class="properties-container">
+            <!-- Carrusel de Exteriores -->
+            <div class="exterior-carousel-container" id="exterior">
+                <h3 class="exterior-title">Fachada y Exterior</h3>
+                <p class="area-description">Vistas exteriores de esta hermosa propiedad de 2 pisos con garaje para 2 autos</p>
+                
+                <div class="exterior-carousel">
+                    <!-- Imágenes 1-10: Fachada y exteriores -->
+                    <div class="exterior-slide active">
+                        <img src="CASITA.jpg" alt="Fachada frontal de la casa">
+                        <div class="carousel-overlay">
+                            <h3>Fachada Principal</h3>
+                            <p>Vista frontal de la residencia con diseño moderno</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exterior-slide">
+                        <img src="Casa (8).webp" alt="Vista lateral de la casa">
+                        <div class="carousel-overlay">
+                            <h3>Vista Trasera</h3>
+                            <p>Perfil de la construcción con detalles arquitectónicos</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exterior-slide">
+                        <img src="Casa (21).webp" alt="Jardín ">
+                        <div class="carousel-overlay">
+                            <h3>Jardín</h3>
+                            <p>Áreas verdes y paisajismo en el frente de la propiedad</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exterior-slide">
+                        <img src="Casa (35).webp" alt="Patio trasero">
+                        <div class="carousel-overlay">
+                            <h3>Patio Trasero</h3>
+                            <p>Amplio espacio de recreación exterior</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exterior-slide">
+                        <img src="Casa (18).webp" alt="Entrada principal">
+                        <div class="carousel-overlay">
+                            <h3>Entrada trasera</h3>
+                            <p>Acceso elegante a la residencia</p>
+                        </div>
+                    </div>
+                    
+                 
+                    
+                    <div class="exterior-slide">
+                        <img src="Casa (1).webp" alt="Sala exterior">
+                        <div class="carousel-overlay">
+                            <h3>Sala exterior</h3>
+                            <p>Área de descanso y entretenimiento exterior</p>
+                        </div>
+                    </div>
+                    
+                    <div class="exterior-slide">
+                        <img src="Casa (4).webp" alt="Piscina o área exterior">
+                        <div class="carousel-overlay">
+                            <h3>vista trasera</h3>
+                            <p>Espacios complementarios de la propiedad</p>
+                        </div>
+                    </div>
+                    
+              
+                    
+                    <div class="exterior-slide">
+                        <img src="CASITA.jpg" alt="Vista aérea">
+                        <div class="carousel-overlay">
+                            <h3>Vista General</h3>
+                            <p>Perspectiva completa de la propiedad</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="exterior-nav exterior-prev" onclick="moveExteriorSlide(-1)">❮</button>
+                <button class="exterior-nav exterior-next" onclick="moveExteriorSlide(1)">❯</button>
+                
+                <div class="exterior-dots">
+                    <!-- Puntos generados dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Carrusel de Interiores -->
+            <div class="interior-carousel-container" id="interior">
+                <h3 class="interior-title">Interiores</h3>
+                <p class="area-description">Espacios interiores con acabados premium y diseño moderno</p>
+                
+                <div class="interior-carousel">
+                    <!-- Imágenes 11-34: Interiores -->
+                    <div class="interior-slide active">
+                        <img src="Casa (6).webp" alt="Sala de estar">
+                        <div class="carousel-overlay">
+                            <h3>Sala de Estar Principal</h3>
+                            <p>Amplio espacio con pisos cerámicos 18x18</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Pisos Cerámicos</span>
+                                <span class="feature-tag">Espaciosa</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (2).webp" alt="Comedor">
+                        <div class="carousel-overlay">
+                            <h3>Comedor</h3>
+                            <p>Área para reuniones familiares</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Elegante</span>
+                                <span class="feature-tag">Buena Iluminación</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="casita (2).webp" alt="Sala de TV">
+                        <div class="carousel-overlay">
+                            <h3>Sala Familiar</h3>
+                            <p>Espacio para entretenimiento</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Acogedor</span>
+                                <span class="feature-tag">Moderno</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (31).webp" alt="Cocina">
+                        <div class="carousel-overlay">
+                            <h3>Cocina Gourmet</h3>
+                            <p>Electrodomésticos de acero inoxidable y granito</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Granito</span>
+                                <span class="feature-tag">Electrodomésticos Premium</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="casa (14).webp" alt="Cocina adicional">
+                        <div class="carousel-overlay">
+                            <h3>Área de Cocina</h3>
+                            <p>Diseño funcional y moderno</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Funcional</span>
+                                <span class="feature-tag">Organizado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (33).webp" alt="Recámara principal">
+                        <div class="carousel-overlay">
+                            <h3>Recámara Principal</h3>
+                            <p>Habitación amplia con 2 walk-in closets</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Espaciosa</span>
+                                <span class="feature-tag">2 Walk-in Closets</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="casita (1).webp" alt="Recámara secundaria">
+                        <div class="carousel-overlay">
+                            <h3>Recámara Secundaria 1</h3>
+                            <p>Habitación con walk-in closet</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Walk-in Closet</span>
+                                <span class="feature-tag">Iluminación Natural</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="casitax (1).webp" alt="Recámara secundaria">
+                        <div class="carousel-overlay">
+                            <h3>Recámara Secundaria 2</h3>
+                            <p>Habitación adicional espaciosa</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Amplia</span>
+                                <span class="feature-tag">Closet Empotrado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (20).webp" alt="Baño principal">
+                        <div class="carousel-overlay">
+                            <h3>Baño Principal</h3>
+                            <p>Granito y acabados premium</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Granito</span>
+                                <span class="feature-tag">Diseño Moderno</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (19).webp" alt="Baño secundario">
+                        <div class="carousel-overlay">
+                            <h3>Baño Secundario</h3>
+                            <p>Para recámaras secundarias</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Moderno</span>
+                                <span class="feature-tag">Granito</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+               
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (11).webp" alt="Cuarto de lavado">
+                        <div class="carousel-overlay">
+                            <h3>Cuarto de Lavado</h3>
+                            <p>Área de lavandería completa</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Espacioso</span>
+                                <span class="feature-tag">Organizado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (24).webp" alt="Pasillos">
+                        <div class="carousel-overlay">
+                            <h3>Pasillos y Circulación</h3>
+                            <p>Distribución interior amplia</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Amplios</span>
+                                <span class="feature-tag">Bien Iluminados</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (26).webp" alt="Escaleras">
+                        <div class="carousel-overlay">
+                            <h3>Escaleras</h3>
+                            <p>Acceso a segundo nivel</p>
+                            <div class="property-features">
+                                <span class="feature-tag">Diseño</span>
+                                <span class="feature-tag">Seguridad</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Imágenes 26-34 -->
+                    <div class="interior-slide">
+                        <img src="Casa (3).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 1</h3>
+                            <p>Perspectiva única de la propiedad</p>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (30).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 2</h3>
+                            <p>Otro ángulo destacado</p>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (28).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 3</h3>
+                            <p>Detalle especial de construcción</p>
+                        </div>
+                    </div>
+                    
+             
+                   
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (17).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 8</h3>
+                            <p>Iluminación natural</p>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (25).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 9</h3>
+                            <p>Distribución inteligente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="interior-nav interior-prev" onclick="moveInteriorSlide(-1)">❮</button>
+                <button class="interior-nav interior-next" onclick="moveInteriorSlide(1)">❯</button>
+                
+                <div class="interior-dots">
+                    <!-- Puntos generados dinámicamente -->
+                </div>
+            </div>
+        </div>
+        
+    </section>
+  <section class="carousel-section" id="features">
+        
+        
+        <div class="properties-container">
+            <!-- Carrusel de Exteriores -->
+            <div class="exterior-carousel-container" id="exterior">
+                <h3 class="exterior-title">Anexo</h3>
+                <p class="area-description">1 cuarto 1 baño sala cocina y walking closet</p>
+                
+                <div class="exterior-carousel">
+                    <!-- Imágenes 1-10: Fachada y exteriores -->
+                    <div class="exterior-slide active">
+                        <img src="anexo.webp" alt="Fachada frontal de la casa">
+                        <div class="carousel-overlay">
+                            <h3>Fachada Principal</h3>
+                            <p>Vista frontal de la residencia con diseño moderno</p>
+                        </div>
+                    </div>
+                     <div class="interior-slide">
+                        <img src="Casa (17).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 8</h3>
+                            <p>Iluminación natural</p>
+                        </div>
+                    </div>
+                    
+                    <div class="interior-slide">
+                        <img src="Casa (25).webp" alt="Vista adicional">
+                        <div class="carousel-overlay">
+                            <h3>Vista Adicional 9</h3>
+                            <p>Distribución inteligente</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="interior-nav interior-prev" onclick="moveInteriorSlide(-1)">❮</button>
+                <button class="interior-nav interior-next" onclick="moveInteriorSlide(1)">❯</button>
+                
+                <div class="interior-dots">
+                    <!-- Puntos generados dinámicamente -->
+                </div>
+            </div>
+        </div>
+                        </section>
+    <!-- Detalles de la Propiedad -->
+    <div class="property-details" id="details">
+        <div class="property-header">
+            <div>
+                <h2 class="property-title">Casa en Venta - Bartow, FL</h2>
+                <p class="property-address">3862 Resting Robin Ave, Bartow, FL 33830</p>
+            </div>
+            <div class="property-price">$415,000</div>
+        </div>
+
+        <div class="property-info-grid">
+            <div class="info-item">
+                <span class="info-icon">🛏️</span>
+                <div class="info-label">Habitaciones</div>
+                <div class="info-value">4</div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🛁</span>
+                <div class="info-label">Baños</div>
+                <div class="info-value">3.5</div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">📐</span>
+                <div class="info-label">Área Construida</div>
+                <div class="info-value">2,748 pies²</div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🌳</span>
+                <div class="info-label">Terreno</div>
+                <div class="info-value">6,534 pies²</div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🅿️</span>
+                <div class="info-label">Garaje</div>
+                <div class="info-value">2 Autos</div>
+            </div>
+            <div class="info-item">
+                <span class="info-icon">🏗️</span>
+                <div class="info-label">Año Construcción</div>
+                <div class="info-value">2023</div>
+            </div>
+        </div>
+
+        <div class="property-description">
+            <h3>Descripción de la Propiedad</h3>
+            <p>Permítanme presentarles esta hermosa casa de 2,745 pies² construida en bloque con 4 habitaciones y 3.5 baños. Esta casa cuenta con pisos de cerámica 18x18 en todas las áreas húmedas, así como en la sala y el comedor.</p>
+            <p>En la planta baja encontrarán una recámara que incluye una sala de estar con kitchenette. La cocina y todos los baños cuentan con cubiertas de granito y electrodomésticos de acero inoxidable.</p>
+            <p>En el segundo piso descubrirán 2 amplias recámaras secundarias con walk-in closets, y una enorme recámara principal con 2 walk-in closets.</p>
+            <p><strong>Nota:</strong> Las fotografías, colores, características y tamaños son solo para fines ilustrativos y pueden variar de las casas tal como se construyeron. La información de la casa y la comunidad, incluidos los precios, las características incluidas, los términos, la disponibilidad y las comodidades, están sujetos a cambios y venta previa en cualquier momento sin previo aviso u obligación.</p>
+        </div>
+
+        <div class="property-features-list">
+            <div class="property-feature">
+                <div class="property-feature-icon">🏠</div>
+                <div class="property-feature-text">
+                    <h4>Características Principales</h4>
+                    <p>Pisos cerámicos 18x18, cubiertas de granito, electrodomésticos de acero inoxidable</p>
+                </div>
+            </div>
+            <div class="property-feature">
+                <div class="property-feature-icon">🛋️</div>
+                <div class="property-feature-text">
+                    <h4>Distribución</h4>
+                    <p>12 habitaciones totales incluyendo sala de estar, comedor, cocina, 4 recámaras, 3.5 baños</p>
+                </div>
+            </div>
+            <div class="property-feature">
+                <div class="property-feature-icon">🧺</div>
+                <div class="property-feature-text">
+                    <h4>Lavandería</h4>
+                    <p>Cuarto de lavado interior en segundo nivel con área completa</p>
+                </div>
+            </div>
+            <div class="property-feature">
+                <div class="property-feature-icon">🌡️</div>
+                <div class="property-feature-text">
+                    <h4>Climatización</h4>
+                    <p>Aire acondicionado central y calefacción eléctrica</p>
+                </div>
+            </div>
+            <div class="property-feature">
+                <div class="property-feature-icon">🍽️</div>
+                <div class="property-feature-text">
+                    <h4>Cocina</h4>
+                    <p>Electrodomésticos: lavaplatos, secadora, calentador de agua eléctrico, microondas, estufa, refrigerador, lavadora</p>
+                </div>
+            </div>
+            <div class="property-feature">
+                <div class="property-feature-icon">🏘️</div>
+                <div class="property-feature-text">
+                    <h4>Comunidad</h4>
+                    <p>HOA: $17/mes • Instalaciones recreativas • Espacio comunitario al aire libre</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="property-description">
+            <h3>Detalles Adicionales</h3>
+            <p><strong>Pago Estimado de Hipoteca:</strong> $3,082/mes (consulte calculadora de pagos mensuales)</p>
+            <p><strong>Tipo de Propiedad:</strong> Casa familiar unifamiliar</p>
+            <p><strong>Precio por Pie Cuadrado:</strong> $151</p>
+            <p><strong>Tiempo en el Mercado:</strong> 65 días en Realtor.com</p>
+            <p><strong>Vistas/Guardados:</strong> 22 vistas | 1 guardado</p>
+            <p><strong>Fuente:</strong> StellarMLS, MLS #S5139237 • Última actualización: 7 de enero de 2026</p>
+            <p><strong>Características Interiores:</strong> Ventiladores de techo, Planta abierta, Recámara principal en segundo piso, Walk-in closets</p>
+            <p><strong>Pisos:</strong> Alfombra, Cerámica</p>
+        </div>
+    </div>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat">
+                <div class="stat-number">2,748</div>
+                <div class="stat-label">Pies Cuadrados Construidos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">6,534</div>
+                <div class="stat-label">Pies Cuadrados de Terreno</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">2023</div>
+                <div class="stat-label">Año de Construcción</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">$151</div>
+                <div class="stat-label">Precio por Pie²</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact" id="contact">
+        <div class="contact-content">
+            <div class="contact-text">
+                <h2>Contáctenos</h2>
+                <p>¿Interesado en esta hermosa propiedad en Bartow, FL? Contáctenos para programar una visita o para obtener más información sobre esta casa.</p>
+                <p>Ofrecemos atención personalizada y podemos ayudarle con todas las etapas del proceso de compra.</p>
+            </div>
+            
+            <div class="social-contact">
+                <h3 class="social-title">Formas de Contacto</h3>
+                
+                <div class="social-icons">
+                    <a href="https://wa.me/18632101111?text=Hola,%20me%20interesa%20la%20casa%20en%203862%20Resting%20Robin%20Ave,%20Bartow,%20FL" target="_blank" class="social-item">
+                        <div class="social-icon whatsapp-bg">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4>WhatsApp</h4>
+                        <p>Envíenos un mensaje directo</p>
+                    </a>
+                    
+                    <a href="mailto:info@casabartowfl.com?subject=Consulta%20sobre%20casa%20en%203862%20Resting%20Robin%20Ave" class="social-item">
+                        <div class="social-icon email-bg">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Correo Electrónico</h4>
+                        <p>Envíe su consulta por correo</p>
+                    </a>
+                    
+                    <a href="tel:+18632101111" class="social-item">
+                        <div class="social-icon phone-bg">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Llamada Telefónica</h4>
+                        <p>Llámenos para hablar directamente</p>
+                    </a>
+                </div>
+                
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Teléfono:</strong> (863) 210-1111</p>
+                    <p><strong>Email:</strong> info@casabartowfl.com</p>
+                    <p><strong>Dirección de la Propiedad:</strong> 3862 Resting Robin Ave, Bartow, FL 33830</p>
+                    <p class="hours">Respondemos en menos de 24 horas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER ORIGINAL CON ICONOS -->
+    <footer>
+        <div class="footer-content">
+            <h3>Casa en Venta - Bartow, FL</h3>
+            <p style="color: rgba(255, 255, 255, 0.6); margin-bottom: 1rem; font-size: clamp(0.85rem, 1.8vw, 0.95rem);">Propiedad exclusiva de 4 habitaciones, 3.5 baños construida en 2023.</p>
+            <p style="color: rgba(255, 255, 255, 0.6); font-size: clamp(0.85rem, 1.8vw, 0.95rem);">3862 Resting Robin Ave, Bartow, FL 33830</p>
+            
+            <!-- Iconos del footer -->
+            <div class="footer-icons">
+                <a href="https://wa.me/18632101111" target="_blank" class="footer-icon" title="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:info@casabartowfl.com" class="footer-icon" title="Correo Electrónico">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="tel:+18632101111" class="footer-icon" title="Llamada Telefónica">
+                    <i class="fas fa-phone"></i>
+                </a>
+                <a href="#" class="footer-icon" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Casa en Venta - Bartow, FL. Todos los derechos reservados. | MLS #S5139237</p>
+            <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 0.5rem;">Información sujeta a cambios sin previo aviso</p>
+        </div>
+    </footer>
+
+    <script>
+        // Animated Background Setup
+        const animatedBg = document.getElementById('animatedBg');
+
+        function createShapes() {
+            const shapesCount = 8; // Reducido para hacer menos visible
+            
+            for(let i = 0; i < shapesCount; i++) {
+                const shape = document.createElement('div');
+                const size = Math.random() * 300 + 80;
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                const delay = Math.random() * 5;
+                const duration = Math.random() * 25 + 15;
+                
+                shape.className = 'shape';
+                shape.style.width = size + 'px';
+                shape.style.height = size + 'px';
+                shape.style.left = x + '%';
+                shape.style.top = y + '%';
+                shape.style.opacity = Math.random() * 0.008 + 0.005; // Muy baja opacidad
+                shape.style.animation = `float ${duration}s ease-in-out ${delay}s infinite alternate`;
+                
+                animatedBg.appendChild(shape);
+            }
+        }
+
+        // Variables para los carruseles
+        let currentExteriorSlideIndex = 0;
+        let currentInteriorSlideIndex = 0;
+        let exteriorSlides = document.querySelectorAll('.exterior-slide');
+        let interiorSlides = document.querySelectorAll('.interior-slide');
+        let exteriorInterval, interiorInterval;
+
+        // Inicializar puntos para carruseles
+        function initializeDots() {
+            const exteriorDots = document.querySelector('.exterior-dots');
+            const interiorDots = document.querySelector('.interior-dots');
+            
+            // Puntos para carrusel exterior
+            exteriorDots.innerHTML = '';
+            exteriorSlides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'exterior-dot';
+                dot.onclick = () => currentExteriorSlide(index);
+                exteriorDots.appendChild(dot);
+            });
+            
+            // Puntos para carrusel interior
+            interiorDots.innerHTML = '';
+            interiorSlides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'interior-dot';
+                dot.onclick = () => currentInteriorSlide(index);
+                interiorDots.appendChild(dot);
+            });
+            
+            // Mostrar slides iniciales
+            showExteriorSlide(currentExteriorSlideIndex);
+            showInteriorSlide(currentInteriorSlideIndex);
+            
+            // Iniciar auto-avance
+            startAutoSlide();
+        }
+
+        // Funciones para carrusel exterior
+        function moveExteriorSlide(n) {
+            showExteriorSlide(currentExteriorSlideIndex += n);
+        }
+
+        function currentExteriorSlide(n) {
+            showExteriorSlide(currentExteriorSlideIndex = n);
+        }
+
+        function showExteriorSlide(n) {
+            const slides = document.querySelectorAll('.exterior-slide');
+            const dots = document.querySelectorAll('.exterior-dot');
+
+            if (n >= slides.length) {
+                currentExteriorSlideIndex = 0;
+            }
+            if (n < 0) {
+                currentExteriorSlideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.querySelector('img').style.transform = 'scale(1)';
+            });
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentExteriorSlideIndex].classList.add('active');
+            setTimeout(() => {
+                slides[currentExteriorSlideIndex].querySelector('img').style.transform = 'scale(1.05)';
+            }, 50);
+            dots[currentExteriorSlideIndex].classList.add('active');
+        }
+
+        // Funciones para carrusel interior
+        function moveInteriorSlide(n) {
+            showInteriorSlide(currentInteriorSlideIndex += n);
+        }
+
+        function currentInteriorSlide(n) {
+            showInteriorSlide(currentInteriorSlideIndex = n);
+        }
+
+        function showInteriorSlide(n) {
+            const slides = document.querySelectorAll('.interior-slide');
+            const dots = document.querySelectorAll('.interior-dot');
+
+            if (n >= slides.length) {
+                currentInteriorSlideIndex = 0;
+            }
+            if (n < 0) {
+                currentInteriorSlideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.querySelector('img').style.transform = 'scale(1)';
+            });
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentInteriorSlideIndex].classList.add('active');
+            setTimeout(() => {
+                slides[currentInteriorSlideIndex].querySelector('img').style.transform = 'scale(1.05)';
+            }, 50);
+            dots[currentInteriorSlideIndex].classList.add('active');
+        }
+
+        // Auto-avance de carruseles con pausa al hover
+        function startAutoSlide() {
+            if (exteriorInterval) clearInterval(exteriorInterval);
+            if (interiorInterval) clearInterval(interiorInterval);
+            
+            exteriorInterval = setInterval(() => {
+                moveExteriorSlide(1);
+            }, 5000);
+
+            interiorInterval = setInterval(() => {
+                moveInteriorSlide(1);
+            }, 4500);
+        }
+
+        function pauseAutoSlide() {
+            if (exteriorInterval) clearInterval(exteriorInterval);
+            if (interiorInterval) clearInterval(interiorInterval);
+        }
+
+        // Event listeners para pausar/reanudar auto-avance
+        document.querySelectorAll('.exterior-carousel, .interior-carousel').forEach(carousel => {
+            carousel.addEventListener('mouseenter', pauseAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+        });
+
+        // Smooth scroll para navegación
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 170,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Botones del hero
+        document.querySelectorAll('.btn-primary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('#details').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        document.querySelectorAll('.btn-secondary').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('#contact').scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Animación para items sociales
+        document.querySelectorAll('.social-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                const icon = this.querySelector('.social-icon');
+                icon.style.transform = 'scale(1.15) rotate(10deg)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                const icon = this.querySelector('.social-icon');
+                icon.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+
+        // Efectos de aparición al scroll
+        function initScrollAnimations() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observar elementos para animación
+            document.querySelectorAll('.carousel-section, .property-details, .stats, .contact, .footer-placeholder, footer').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(el);
+            });
+        }
+
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', function() {
+            createShapes();
+            initializeDots();
+            initScrollAnimations();
+            
+            // Animación flotante para el fondo
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes float {
+                    0%, 100% { 
+                        transform: translate(0, 0) scale(1) rotate(0deg); 
+                    }
+                    25% { 
+                        transform: translate(15px, -15px) scale(1.05) rotate(90deg); 
+                    }
+                    50% { 
+                        transform: translate(-10px, 10px) scale(0.95) rotate(180deg); 
+                    }
+                    75% { 
+                        transform: translate(5px, -5px) scale(1.02) rotate(270deg); 
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Efecto de hover para cards
+            document.querySelectorAll('.info-item, .property-feature, .social-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.zIndex = '10';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.zIndex = '1';
+                });
+            });
+            
+            // Animación para iconos del footer
+            document.querySelectorAll('.footer-icon').forEach(icon => {
+                icon.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-5px) scale(1.1)';
+                });
+                
+                icon.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+
+        // Efecto de parallax sutil para el hero
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPositionY = scrolled * 0.5 + 'px';
+            }
+        });
+    </script>
+</body>
+</html>
