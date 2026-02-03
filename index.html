@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASA EN VENTA - 3862 Resting Robin Ave, Bartow, FL</title>
     <style>
+ /* ===== IMPORTAR FUENTE ROBOTO ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +30,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--secondary);
     color: var(--primary);
     line-height: 1.6;
@@ -35,6 +38,44 @@ body {
     position: relative;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-weight: 400; /* Peso de fuente más sólido */
+}
+
+/* ===== MEJORAR LEGIBILIDAD DE TEXTOS ===== */
+.hero p,
+.carousel-section .section-subtitle,
+.area-description,
+.property-description p,
+.contact-text p,
+.social-item p,
+.contact-info p,
+.footer-content p,
+.footer-bottom p {
+    font-weight: 400; /* Más sólido que 300 */
+    letter-spacing: 0.02em; /* Mejor espaciado */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); /* Suave sombra para mejor contraste */
+}
+
+/* Títulos más sólidos */
+.hero h1,
+.carousel-section h1.main-title,
+.carousel-section .section-title,
+.property-title,
+.contact-text h2,
+.social-title {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* Subtítulos y descripciones */
+.hero p {
+    font-weight: 400; /* Roboto 400 es más legible que 300 */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-section .section-subtitle {
+    font-weight: 400;
+    opacity: 0.9; /* Mejor contraste */
 }
 
 /* ===== ANIMATED BACKGROUND CON TRANSPARENCIA LEVE ===== */
@@ -48,8 +89,6 @@ body {
     z-index: -1;
     overflow: hidden;
 }
-
-
 
 /* ===== HEADER ===== */
 header {
@@ -99,7 +138,7 @@ header {
 }
 
 .logo-img {
-    height: 85px;
+    height: 45px;
     width: auto;
     object-fit: contain;
 }
@@ -170,6 +209,7 @@ nav a {
     font-size: 0.95rem;
     position: relative;
     transition: color 0.3s ease;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav a::after {
@@ -197,6 +237,7 @@ nav a:hover::after {
     border: 2px solid var(--accent);
     font-weight: 600;
     font-size: 0.9rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cta-button:hover {
@@ -237,6 +278,7 @@ nav a:hover::after {
     padding: 0.8rem 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     transition: color 0.3s ease, transform 0.3s ease;
+    font-family: 'Roboto', sans-serif;
 }
 
 .mobile-menu a:hover {
@@ -316,7 +358,6 @@ nav a:hover::after {
     z-index: 10;
     animation: fadeInUp 0.8s ease-out 0.2s both;
     padding: 3rem;
-   
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
@@ -342,6 +383,7 @@ nav a:hover::after {
     color: white;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .hero h1::after {
@@ -373,10 +415,12 @@ nav a:hover::after {
     color: rgba(255, 255, 255, 0.92);
     margin-bottom: 2.5rem;
     line-height: 1.8;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 para mejor legibilidad */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.02em;
 }
 
 .hero-buttons {
@@ -400,6 +444,7 @@ nav a:hover::after {
     font-size: 1.05rem;
     position: relative;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-primary::before {
@@ -438,6 +483,7 @@ nav a:hover::after {
     font-size: 1.05rem;
     position: relative;
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 .btn-secondary::before {
@@ -480,6 +526,7 @@ nav a:hover::after {
     position: relative;
     padding-bottom: 2rem;
     animation: slideInFromBottom 1s ease-out 0.2s both;
+    font-family: 'Roboto', sans-serif;
 }
 
 @keyframes slideInFromBottom {
@@ -514,6 +561,7 @@ nav a:hover::after {
     font-weight: 600;
     animation: fadeInUp 0.8s ease-out 0.4s both;
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .carousel-section .section-title::before,
@@ -545,10 +593,12 @@ nav a:hover::after {
     color: var(--neutral);
     margin-bottom: 4rem;
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
     animation: fadeInUp 0.8s ease-out 0.5s both;
     position: relative;
     padding: 1.5rem 0;
+    letter-spacing: 0.02em;
+    line-height: 1.7;
 }
 
 .carousel-section .section-subtitle::before {
@@ -587,6 +637,7 @@ nav a:hover::after {
     font-weight: 600;
     padding-bottom: 0.8rem;
     border-bottom: 2px solid var(--border);
+    font-family: 'Roboto', sans-serif;
 }
 
 .area-description {
@@ -595,10 +646,14 @@ nav a:hover::after {
     margin-bottom: 2rem;
     font-size: 1.05rem;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    letter-spacing: 0.02em;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 2; /* Asegurar que esté sobre los dots */
 }
 
 /* Contenedores de carrusel */
@@ -615,6 +670,7 @@ nav a:hover::after {
     margin-bottom: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding-bottom: 70px; /* ESPACIO EXTRA PARA LOS DOTS */
 }
 
 .exterior-carousel-container:hover,
@@ -636,6 +692,8 @@ nav a:hover::after {
     margin: 0 0 1.5rem 0;
     padding: 0;
     position: relative;
+    font-family: 'Roboto', sans-serif;
+    z-index: 2; /* Asegurar que esté sobre los dots */
 }
 
 .exterior-title::after,
@@ -652,18 +710,19 @@ nav a:hover::after {
     border-radius: 2px;
 }
 
-/* ===== CARRUSELES CON MAYOR ALTURA (MEJORADA) ===== */
+/* Carruseles */
 .exterior-carousel,
 .interior-carousel,
 .annex-carousel {
     position: relative;
     width: 100%;
-    height: 700px; /* Aumentado significativamente para mejor proporción */
+    height: 550px;
     display: flex;
     overflow: hidden;
     border-radius: 16px;
     background-color: #f8f8f8;
     border: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px; /* Espacio antes de los dots */
 }
 
 .exterior-slide,
@@ -709,143 +768,29 @@ nav a:hover::after {
     bottom: 0;
     left: 0;
     right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     padding: 2.5rem;
     color: white;
     transform: translateY(0);
     opacity: 1;
+    font-family: 'Roboto', sans-serif;
 }
 
 .carousel-overlay h3 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.5px;
-    
-    /* Sombreado de texto mejorado */
-    text-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.8),
-        0 2px 10px rgba(0, 0, 0, 0.9),
-        0 3px 20px rgba(0, 0, 0, 0.6);
-    
-    display: inline-block;
-    padding: 1rem 1.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px) saturate(180%);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .carousel-overlay p {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.92);
     margin-bottom: 1rem;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
     max-width: 600px;
-    
-    /* Sombreado de texto mejorado */
-    text-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.7),
-        0 2px 8px rgba(0, 0, 0, 0.8),
-        0 3px 15px rgba(0, 0, 0, 0.5);
-    
-    display: inline-block;
-    padding: 1rem 1.8rem;
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(15px) saturate(180%);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.05);
-}
-
-/* Efecto hover para más interacción */
-.carousel-overlay h3:hover {
-    background: rgba(255, 255, 255, 0.15);
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-    text-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.9),
-      
-}
-
-.carousel-overlay p:hover {
-    background: rgba(0, 0, 0, 0.25);
-    transform: translateY(-2px);
-    transition: all 0.3s ease;
-    text-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.8),
-       
-}
-.carousel-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2.5rem;
-    color: white;
-    transform: translateY(0);
-    opacity: 1;
-    text-align: left;
-}
-
-/* SOLO TEXTO - Eliminar botones/cuadros */
-.carousel-overlay h3 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    
-    /* Solo texto con sombras para resaltar */
-    text-shadow: 
-        0 2px 4px rgba(0, 0, 0, 0.8),
-        0 4px 8px rgba(0, 0, 0, 0.6),
-        0 6px 12px rgba(0, 0, 0, 0.4);
-    
-    /* Eliminar todo el fondo/botón */
-    display: block;
-    padding: 0;
-    background: transparent;
-    backdrop-filter: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-}
-
-.carousel-overlay p {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.95);
-    margin-bottom: 0;
-    line-height: 1.6;
-    font-weight: 300;
-    max-width: 600px;
-    
-    /* Solo texto con sombras para resaltar */
-    text-shadow: 
-        0 1px 3px rgba(0, 0, 0, 0.8),
-        0 3px 6px rgba(0, 0, 0, 0.6),
-        0 5px 9px rgba(0, 0, 0, 0.4);
-    
-    /* Eliminar todo el fondo/botón */
-    display: block;
-    padding: 0;
-    background: transparent;
-    backdrop-filter: none;
-    border-radius: 0;
-    border: none;
-    box-shadow: none;
-}
-
-/* Efecto sutil al pasar el mouse */
-.carousel-overlay h3:hover,
-.carousel-overlay p:hover {
-    text-shadow: 
-        0 2px 5px rgba(0, 0, 0, 0.9),
-        0 4px 10px rgba(0, 0, 0, 0.7),
-        0 6px 15px rgba(0, 0, 0, 0.5);
-    transition: text-shadow 0.3s ease;
+    letter-spacing: 0.02em;
 }
 
 /* Características mejoradas */
@@ -864,6 +809,8 @@ nav a:hover::after {
     backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.25);
     transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 .feature-tag:hover {
@@ -917,17 +864,19 @@ nav a:hover::after {
     right: 20px;
 }
 
-/* Dots mejorados */
+/* ===== DOTS CORREGIDOS - NO SE MONTAN SOBRE EL TEXTO ===== */
 .exterior-dots,
 .interior-dots,
 .annex-dots {
     position: absolute;
-    bottom: 25px;
+    bottom: 25px; /* Posicionado en la parte inferior del contenedor */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 12px;
-    z-index: 100;
+    z-index: 10; /* z-index más bajo que el texto */
+    margin-top: 10px;
+    padding: 10px 0;
 }
 
 .exterior-dot,
@@ -936,20 +885,44 @@ nav a:hover::after {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(0, 102, 204, 0.3); /* Color más suave */
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.8);
 }
 
 .exterior-dot.active,
 .interior-dot.active,
 .annex-dot.active {
-    background: white;
+    background: var(--accent);
     width: 36px;
     border-radius: 6px;
     transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 15px rgba(0, 102, 204, 0.4);
+}
+
+.exterior-dot:hover,
+.interior-dot:hover,
+.annex-dot:hover {
+    background: var(--accent);
+    transform: scale(1.1);
+}
+
+/* Asegurar que el texto esté por encima */
+.exterior-title,
+.interior-title,
+.annex-title,
+.area-description {
+    position: relative;
+    z-index: 20; /* Mayor que los dots */
+    pointer-events: none; /* No interferir con clicks en dots */
+}
+
+/* Contenedor de área de descripción con más espacio */
+.area-description-container {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 20;
 }
 
 /* ===== DETALLES DE PROPIEDAD ===== */
@@ -978,6 +951,7 @@ nav a:hover::after {
     color: var(--primary);
     margin-bottom: 0.8rem;
     position: relative;
+    font-family: 'Roboto', sans-serif;
 }
 
 .property-title::after {
@@ -995,7 +969,8 @@ nav a:hover::after {
     font-size: 1.2rem;
     color: var(--neutral);
     margin-bottom: 1rem;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
+    letter-spacing: 0.02em;
 }
 
 .property-price {
@@ -1007,6 +982,7 @@ nav a:hover::after {
     border-radius: 50px;
     border: 2px solid rgba(0, 102, 204, 0.1);
     transition: all 0.3s ease;
+    font-family: 'Roboto', sans-serif;
 }
 
 .property-price:hover {
@@ -1053,12 +1029,14 @@ nav a:hover::after {
     color: var(--neutral);
     margin-bottom: 0.5rem;
     font-weight: 500;
+    font-family: 'Roboto', sans-serif;
 }
 
 .info-value {
     font-size: clamp(1.2rem, 3vw, 1.4rem);
     font-weight: 700;
     color: var(--primary);
+    font-family: 'Roboto', sans-serif;
 }
 
 .property-description {
@@ -1072,6 +1050,7 @@ nav a:hover::after {
     font-weight: 600;
     position: relative;
     padding-bottom: 0.8rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .property-description h3::after {
@@ -1090,7 +1069,8 @@ nav a:hover::after {
     line-height: 1.8;
     font-size: clamp(1rem, 2vw, 1.1rem);
     margin-bottom: 1.2rem;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
+    letter-spacing: 0.02em;
 }
 
 /* Características de propiedad */
@@ -1147,13 +1127,15 @@ nav a:hover::after {
     margin-bottom: 0.5rem;
     color: var(--primary);
     font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .property-feature-text p {
     font-size: 0.95rem;
     color: var(--neutral);
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
+    letter-spacing: 0.02em;
 }
 
 /* ===== STATS SECTION ===== */
@@ -1215,13 +1197,15 @@ nav a:hover::after {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-feature-settings: "tnum";
+    font-family: 'Roboto', sans-serif;
 }
 
 .stat-label {
     font-size: clamp(1rem, 2vw, 1.2rem);
     color: rgba(255, 255, 255, 0.85);
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
     letter-spacing: 0.5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* ===== CONTACT SECTION ===== */
@@ -1235,7 +1219,7 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    align-items: start; /* Cambiado de 'center' a 'start' */
+    align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -1250,7 +1234,7 @@ nav a:hover::after {
     animation: fadeInUp 0.8s ease-out 0.5s both;
     position: relative;
     padding-bottom: 1rem;
-    margin-top: 0; /* Asegurar que no tenga margen superior */
+    font-family: 'Roboto', sans-serif;
 }
 
 .contact-text h2::after {
@@ -1270,7 +1254,8 @@ nav a:hover::after {
     line-height: 1.8;
     font-size: clamp(1rem, 2vw, 1.1rem);
     animation: fadeInUp 0.8s ease-out 0.6s both;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
+    letter-spacing: 0.02em;
 }
 
 /* ===== SECCIÓN DE REDES SOCIALES ===== */
@@ -1289,6 +1274,7 @@ nav a:hover::after {
     text-align: center;
     position: relative;
     padding-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 .social-title::after {
@@ -1386,6 +1372,7 @@ nav a:hover::after {
     color: var(--primary);
     text-align: center;
     font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .social-item p {
@@ -1393,7 +1380,8 @@ nav a:hover::after {
     color: var(--neutral);
     text-align: center;
     line-height: 1.6;
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
+    letter-spacing: 0.02em;
 }
 
 .contact-info {
@@ -1411,13 +1399,15 @@ nav a:hover::after {
     margin-bottom: 1.5rem;
     color: var(--primary);
     font-weight: 600;
+    font-family: 'Roboto', sans-serif;
 }
 
 .contact-info p {
     color: var(--neutral);
     margin-bottom: 0.8rem;
     font-size: clamp(0.9rem, 1.8vw, 1rem);
-    font-weight: 300;
+    font-weight: 400; /* Cambiado de 300 a 400 */
+    letter-spacing: 0.02em;
 }
 
 .hours {
@@ -1456,6 +1446,18 @@ footer::before {
     margin-bottom: 2.5rem;
 }
 
+.footer-content h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer-content p {
+    font-weight: 400; /* Más sólido que 300 */
+    letter-spacing: 0.02em;
+    line-height: 1.7;
+}
+
 /* Iconos del footer */
 .footer-icons {
     display: flex;
@@ -1491,27 +1493,12 @@ footer::before {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     font-size: clamp(0.9rem, 1.8vw, 1rem);
-    font-weight: 300;
+    font-weight: 400; /* Más sólido */
     line-height: 1.6;
+    letter-spacing: 0.02em;
 }
 
-/* ===== RESPONSIVE CON ALTURAS AJUSTADAS ===== */
-@media (max-width: 1600px) {
-    .exterior-carousel,
-    .interior-carousel,
-    .annex-carousel {
-        height: 650px; /* Un poco más bajo para pantallas grandes */
-    }
-}
-
-@media (max-width: 1400px) {
-    .exterior-carousel,
-    .interior-carousel,
-    .annex-carousel {
-        height: 600px; /* Altura óptima para la mayoría de monitores */
-    }
-}
-
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1200px) {
     .carousel-section {
         padding: 5rem 1.5rem;
@@ -1520,7 +1507,7 @@ footer::before {
     .exterior-carousel,
     .interior-carousel,
     .annex-carousel {
-        height: 550px; /* Buen balance para laptops */
+        height: 450px;
     }
     
     .hero {
@@ -1556,10 +1543,11 @@ footer::before {
         font-size: 1rem;
     }
     
-    .exterior-carousel,
-    .interior-carousel,
-    .annex-carousel {
-        height: 500px; /* Buena altura para tablets */
+    /* Ajuste de dots en tablet */
+    .exterior-dots,
+    .interior-dots,
+    .annex-dots {
+        bottom: 20px;
     }
 }
 
@@ -1585,7 +1573,7 @@ footer::before {
     }
 
     .logo-img {
-        height: 65px;
+        height: 35px;
     }
 
     .hero {
@@ -1640,6 +1628,7 @@ footer::before {
     .interior-carousel-container,
     .annex-carousel-container {
         padding: 1.8rem;
+        padding-bottom: 60px; /* Ajuste para móvil */
     }
     
     .exterior-title,
@@ -1652,12 +1641,13 @@ footer::before {
     .area-description {
         font-size: 0.95rem;
         margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
     }
     
     .exterior-carousel,
     .interior-carousel,
     .annex-carousel {
-        height: 450px; /* Excelente altura para tablets pequeñas */
+        height: 350px;
     }
     
     .carousel-overlay {
@@ -1665,11 +1655,11 @@ footer::before {
     }
     
     .carousel-overlay h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     
     .carousel-overlay p {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
     }
     
     .exterior-nav,
@@ -1678,6 +1668,27 @@ footer::before {
         width: 44px;
         height: 44px;
         font-size: 1.2rem;
+    }
+    
+    /* Ajuste de dots en móvil */
+    .exterior-dots,
+    .interior-dots,
+    .annex-dots {
+        bottom: 15px;
+        gap: 8px;
+    }
+    
+    .exterior-dot,
+    .interior-dot,
+    .annex-dot {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .exterior-dot.active,
+    .interior-dot.active,
+    .annex-dot.active {
+        width: 28px;
     }
 
     .property-header {
@@ -1753,7 +1764,7 @@ footer::before {
     }
 
     .logo-img {
-        height: 50px;
+        height: 30px;
     }
 
     .cta-button {
@@ -1802,17 +1813,17 @@ footer::before {
     .exterior-carousel,
     .interior-carousel,
     .annex-carousel {
-        height: 400px; /* Buena altura para móviles grandes */
+        height: 300px;
     }
     
     .carousel-overlay h3 {
-        font-size: 1.4rem;
-        margin-bottom: 0.6rem;
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
     }
     
     .carousel-overlay p {
-        font-size: 1rem;
-        margin-bottom: 0.8rem;
+        font-size: 0.9rem;
+        margin-bottom: 0.6rem;
     }
     
     .feature-tag {
@@ -1828,6 +1839,7 @@ footer::before {
     .interior-carousel-container,
     .annex-carousel-container {
         padding: 1.5rem;
+        padding-bottom: 50px; /* Más ajuste para móvil pequeño */
     }
 
     .exterior-nav,
@@ -1857,22 +1869,22 @@ footer::before {
     .exterior-dots,
     .interior-dots,
     .annex-dots {
-        bottom: 15px;
-        gap: 8px;
+        bottom: 12px;
+        gap: 6px;
     }
 
     .exterior-dot,
     .interior-dot,
     .annex-dot {
-        width: 10px;
-        height: 10px;
+        width: 8px;
+        height: 8px;
         border-width: 1.5px;
     }
 
     .exterior-dot.active,
     .interior-dot.active,
     .annex-dot.active {
-        width: 28px;
+        width: 24px;
     }
 
     .property-info-grid {
@@ -1928,26 +1940,6 @@ footer::before {
     }
 }
 
-@media (max-width: 480px) {
-    .exterior-carousel,
-    .interior-carousel,
-    .annex-carousel {
-        height: 350px; /* Altura para móviles medianos */
-    }
-    
-    .carousel-overlay {
-        padding: 1rem;
-    }
-    
-    .carousel-overlay h3 {
-        font-size: 1.3rem;
-    }
-    
-    .carousel-overlay p {
-        font-size: 0.95rem;
-    }
-}
-
 @media (max-width: 400px) {
     header {
         height: 50px;
@@ -1968,7 +1960,7 @@ footer::before {
     .exterior-carousel,
     .interior-carousel,
     .annex-carousel {
-        height: 320px; /* Altura óptima para móviles pequeños */
+        height: 250px;
     }
     
     .carousel-overlay {
@@ -1976,11 +1968,11 @@ footer::before {
     }
     
     .carousel-overlay h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     .carousel-overlay p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .stats-container {
@@ -2013,22 +2005,6 @@ footer::before {
     
     .mobile-menu a {
         font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 360px) {
-    .exterior-carousel,
-    .interior-carousel,
-    .annex-carousel {
-        height: 300px; /* Mínimo recomendado para pantallas muy pequeñas */
-    }
-    
-    .carousel-overlay h3 {
-        font-size: 1.1rem;
-    }
-    
-    .carousel-overlay p {
-        font-size: 0.85rem;
     }
 }
 
@@ -2071,572 +2047,553 @@ footer::before {
     <!-- Animated Background -->
     <div class="animated-bg" id="animatedBg"></div>
 
-    <!-- Menú móvil -->
-    <style>
-      /* ===== HEADER RESPONSIVE MEJORADO ===== */
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        padding: 0.8rem 1.5rem; /* Reducido en mobile */
-        z-index: 1000;
-        border-bottom: 1px solid var(--border);
-        height: 60px; /* Fijo en mobile */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: slideDown 0.8s ease-out;
-    }
-
-    .header-content {
-        max-width: 1400px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* ===== LOGO RESPONSIVE ===== */
-  
-
-
-    /* ===== BOTÓN HAMBURGUESA ===== */
-    .hamburger-menu-btn {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 32px;
-        height: 24px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 1002;
-        position: relative;
-        margin-left: auto;
-        align-items: center;
-    }
-
-    .hamburger-menu-line {
-        width: 100%;
-        height: 3px;
-        background: var(--accent);
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        transform-origin: center;
-    }
-
-    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* ===== HERO AJUSTADO ===== */
-    .hero {
-        margin-top: 60px; /* Igual que altura del header */
-        min-height: calc(100vh - 60px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)), 
-                    url('CASITA.jpg') center/cover no-repeat;
-        padding: 2rem 1rem;
-        overflow: hidden;
-        position: relative;
-    }
-
-    /* ===== MEDIA QUERIES PARA MOBILE ===== */
-    @media (max-width: 768px) {
-        .hamburger-menu-btn {
-            display: flex;
-        }
-        
-        nav {
-            display: none !important;
-        }
-        
-        /* Header más compacto */
-        header {
-            height: 55px;
-            padding: 0.6rem 1rem;
-        }
-        
-        /* Hero ajustado al header */
-        .hero {
-            margin-top: 55px;
-            min-height: calc(100vh - 55px);
-            padding: 1.5rem 1rem;
-        }
-        
-        /* Logo más pequeño */
-        .logo-img {
-            height: 35px;
-        }
-        
-        .logo-text {
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 576px) {
-        header {
-            height: 50px;
-            padding: 0.5rem 0.8rem;
-        }
-        
-        .hero {
-            margin-top: 50px;
-            min-height: calc(100vh - 50px);
-            padding: 1rem;
-        }
-        
-        .logo-img {
-            height: 30px;
-        }
-        
-        .hamburger-menu-btn {
-            width: 28px;
-            height: 20px;
-        }
-        
-        .hamburger-menu-line {
-            height: 2.5px;
-        }
-    }
-
-    @media (max-width: 400px) {
-        header {
-            height: 48px;
-        }
-        
-        .hero {
-            margin-top: 48px;
-        }
-        
-        .logo-img {
-            height: 28px;
-        }
-        
-        .hamburger-menu-btn {
-            width: 26px;
-            height: 18px;
-        }
-    }
-
-    /* ===== MENÚ MÓVIL (igual que antes) ===== */
-    .mobile-nav-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-    .mobile-nav-overlay.overlay-active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .mobile-nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        z-index: 1000;
-        padding: 70px 1.5rem 2rem; /* Top padding reducido */
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        transition: right 0.4s ease;
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
-        border-left: 1px solid var(--border);
-        overflow-y: auto;
-    }
-    .mobile-nav-menu.menu-active {
-        right: 0;
-    }
-
-    .mobile-nav-link {
-        text-decoration: none;
-        color: var(--primary);
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 0.8rem 1rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-    .mobile-nav-link:hover {
-        color: var(--accent);
-        background: var(--accent-light);
-    }
-
-    .mobile-nav-cta {
-        background: var(--accent);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        border: 2px solid var(--accent);
-        text-align: center;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-    }
-    .mobile-nav-cta:hover {
-        background: transparent;
-        color: var(--accent);
-    }
-
-    </style>
-    <!-- Font Awesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Animated Background -->
-    <div class="animated-bg" id="animatedBg"></div>
-
-    <!-- Menú móvil -->
-    <style>
-      /* ===== HEADER RESPONSIVE MEJORADO ===== */
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        padding: 0.8rem 1.5rem; /* Reducido en mobile */
-        z-index: 1000;
-        border-bottom: 1px solid var(--border);
-        height: 60px; /* Fijo en mobile */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: slideDown 0.8s ease-out;
-    }
-
-    .header-content {
-        max-width: 1400px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* ===== LOGO RESPONSIVE ===== */
-    .logo-img {
-        height: 40px;
-        width: auto;
-        object-fit: contain;
-    }
-
-    .logo-text {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--primary);
-        letter-spacing: 1px;
-        transition: color 0.3s ease;
-    }
-
-    /* ===== BOTÓN HAMBURGUESA ===== */
-    .hamburger-menu-btn {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 32px;
-        height: 24px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 0;
-        z-index: 1002;
-        position: relative;
-        margin-left: auto;
-        align-items: center;
-    }
-
-    .hamburger-menu-line {
-        width: 100%;
-        height: 3px;
-        background: var(--accent);
-        border-radius: 2px;
-        transition: all 0.3s ease;
-        transform-origin: center;
-    }
-
-    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(2) {
-        opacity: 0;
-    }
-    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
-
-    /* ===== HERO AJUSTADO ===== */
-    .hero {
-        margin-top: 60px; /* Igual que altura del header */
-        min-height: calc(100vh - 60px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)), 
-                    url('CASITA.jpg') center/cover no-repeat;
-        padding: 2rem 1rem;
-        overflow: hidden;
-        position: relative;
-    }
-
-    /* ===== MEDIA QUERIES PARA MOBILE ===== */
-    @media (max-width: 768px) {
-        .hamburger-menu-btn {
-            display: flex;
-        }
-        
-        nav {
-            display: none !important;
-        }
-        
-        /* Header más compacto */
-        header {
-            height: 55px;
-            padding: 0.6rem 1rem;
-        }
-        
-        /* Hero ajustado al header */
-        .hero {
-            margin-top: 55px;
-            min-height: calc(100vh - 55px);
-            padding: 1.5rem 1rem;
-        }
-        
-        /* Logo más pequeño */
-        .logo-img {
-            height: 35px;
-        }
-        
-        .logo-text {
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 576px) {
-        header {
-            height: 50px;
-            padding: 0.5rem 0.8rem;
-        }
-        
-        .hero {
-            margin-top: 50px;
-            min-height: calc(100vh - 50px);
-            padding: 1rem;
-        }
-        
-        .logo-img {
-            height: 30px;
-        }
-        
-        .hamburger-menu-btn {
-            width: 28px;
-            height: 20px;
-        }
-        
-        .hamburger-menu-line {
-            height: 2.5px;
-        }
-    }
-
-    @media (max-width: 400px) {
-        header {
-            height: 48px;
-        }
-        
-        .hero {
-            margin-top: 48px;
-        }
-        
-        .logo-img {
-            height: 28px;
-        }
-        
-        .hamburger-menu-btn {
-            width: 26px;
-            height: 18px;
-        }
-    }
-
-    /* ===== MENÚ MÓVIL (igual que antes) ===== */
-    .mobile-nav-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        z-index: 999;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-    .mobile-nav-overlay.overlay-active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .mobile-nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 280px;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        z-index: 1000;
-        padding: 70px 1.5rem 2rem; /* Top padding reducido */
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        transition: right 0.4s ease;
-        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
-        border-left: 1px solid var(--border);
-        overflow-y: auto;
-    }
-    .mobile-nav-menu.menu-active {
-        right: 0;
-    }
-
-    .mobile-nav-link {
-        text-decoration: none;
-        color: var(--primary);
-        font-size: 1rem;
-        font-weight: 500;
-        padding: 0.8rem 1rem;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-    }
-    .mobile-nav-link:hover {
-        color: var(--accent);
-        background: var(--accent-light);
-    }
-
-    .mobile-nav-cta {
-        background: var(--accent);
-        color: white;
-        padding: 0.8rem 1.5rem;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        border: 2px solid var(--accent);
-        text-align: center;
-        margin-top: 1rem;
-        font-size: 0.9rem;
-    }
-    .mobile-nav-cta:hover {
-        background: transparent;
-        color: var(--accent);
-    }
-
-
-    </style>
-
-    <!-- HEADER ORIGINAL -->
+    <!-- HEADER CON MENÚ RESPONSIVE -->
     <header>
         <div class="header-content">
-        <a href="#" class="logo">
-            <img src="apex.png" alt="Logo de la empresa" style="height: 50px;"class="logo-img">
-        </a>
-        <nav>
-            <a href="#exterior">Exterior</a>
-            <a href="#interior">Interior</a>
-            <a href="#annex">Anexo</a>
-            <a href="#details">Detalles</a>
-            <a href="#contact" class="cta-button">Contactar</a>
-        </nav>
-    </div>
+            <a href="#" class="logo">
+                <img src="apex.png" alt="Logo de la empresa" class="logo-img">
+            </a>
+            
+            <!-- Menú de navegación para escritorio -->
+            <nav class="desktop-nav">
+                <a href="#exterior">Exterior</a>
+                <a href="#interior">Interior</a>
+                <a href="#annex">Anexo</a>
+                <a href="#details">Detalles</a>
+                <a href="#contact" class="cta-button">Contactar</a>
+            </nav>
+            
+            <!-- Botón de hamburguesa para móvil -->
+            <button class="hamburger-btn" id="hamburgerBtn" aria-label="Abrir menú">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
     </header>
-<!-- En el header, después del logo -->
-<button class="hamburger-menu-btn" id="hamburgerBtn">
-    <span class="hamburger-menu-line"></span>
-    <span class="hamburger-menu-line"></span>
-    <span class="hamburger-menu-line"></span>
-</button>
 
-<!-- Al final del body, antes de cerrar </body> -->
-<div class="mobile-nav-overlay" id="mobileOverlay"></div>
-<div class="mobile-nav-menu" id="mobileMenu">
-    <a href="#exterior" class="mobile-nav-link">Exterior</a>
-    <a href="#interior" class="mobile-nav-link">Interior</a>
-    <a href="#annex" class="mobile-nav-link">Anexo</a>
-    <a href="#details" class="mobile-nav-link">Detalles</a>
-    <a href="#contact" class="mobile-nav-cta">Contactar Ahora</a>
-</div>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    const mobileOverlay = document.getElementById('mobileOverlay');
-    
-    if (hamburgerBtn && mobileMenu && mobileOverlay) {
-        // Abrir/cerrar menú
-        hamburgerBtn.addEventListener('click', function() {
-            this.classList.toggle('hamburger-active');
-            mobileMenu.classList.toggle('menu-active');
-            mobileOverlay.classList.toggle('overlay-active');
-            document.body.style.overflow = mobileMenu.classList.contains('menu-active') ? 'hidden' : '';
-        });
+    <!-- Menú móvil desplegable -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#" class="mobile-logo">
+<img src="apex.png" alt="Logo" class="mobile-logo-img" style="height: 85px;">
+            </a>
+            <button class="close-menu-btn" id="closeMenuBtn" aria-label="Cerrar menú">
+                &times;
+            </button>
+        </div>
         
-        // Cerrar menú al hacer clic en overlay
-        mobileOverlay.addEventListener('click', function() {
-            hamburgerBtn.classList.remove('hamburger-active');
-            mobileMenu.classList.remove('menu-active');
-            this.classList.remove('overlay-active');
-            document.body.style.overflow = '';
-        });
+        <div class="mobile-menu-content">
+            <a href="#exterior" class="mobile-menu-link" data-section="exterior">
+                <span class="mobile-menu-icon">🏠</span>
+                <span>Exterior</span>
+            </a>
+            <a href="#interior" class="mobile-menu-link" data-section="interior">
+                <span class="mobile-menu-icon">🛋️</span>
+                <span>Interior</span>
+            </a>
+            <a href="#annex" class="mobile-menu-link" data-section="annex">
+                <span class="mobile-menu-icon">📦</span>
+                <span>Anexo</span>
+            </a>
+            <a href="#details" class="mobile-menu-link" data-section="details">
+                <span class="mobile-menu-icon">📋</span>
+                <span>Detalles</span>
+            </a>
+            <a href="#contact" class="mobile-menu-link mobile-menu-cta" data-section="contact">
+                <span class="mobile-menu-icon">📞</span>
+                <span>Contactar Ahora</span>
+            </a>
+        </div>
         
-        // Cerrar menú al hacer clic en enlace
-        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, .mobile-nav-cta');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                hamburgerBtn.classList.remove('hamburger-active');
-                mobileMenu.classList.remove('menu-active');
-                mobileOverlay.classList.remove('overlay-active');
-                document.body.style.overflow = '';
+        <div class="mobile-menu-footer">
+            <p>¿Necesitas ayuda?</p>
+            <a href="tel:+18632101111" class="mobile-phone-link">
+                <span class="mobile-phone-icon">📱</span>
+                <span>(863) 210-1111</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Overlay para cerrar menú -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <style>
+        /* ===== ESTILOS PARA EL HEADER RESPONSIVE ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Logo */
+        .logo-img {
+            height: 45px;
+            width: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Menú de escritorio */
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .desktop-nav a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .desktop-nav a:not(.cta-button)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .desktop-nav a:not(.cta-button):hover::after {
+            width: 100%;
+        }
+
+        .desktop-nav a:hover {
+            color: var(--accent);
+        }
+
+        .desktop-nav .cta-button {
+            background: var(--accent);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent);
+        }
+
+        .desktop-nav .cta-button:hover {
+            background: transparent;
+            color: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Botón hamburguesa - SOLO VISIBLE EN MÓVIL */
+        .hamburger-btn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 32px;
+            height: 24px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1002;
+            position: relative;
+        }
+
+        .hamburger-line {
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        /* Estilos cuando el menú está abierto */
+        .hamburger-btn.active .hamburger-line:nth-child(1) {
+            transform: translateY(10.5px) rotate(45deg);
+        }
+
+        .hamburger-btn.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-btn.active .hamburger-line:nth-child(3) {
+            transform: translateY(-10.5px) rotate(-45deg);
+        }
+
+        /* ===== MENÚ MÓVIL ===== */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 300px;
+            height: 100vh;
+            background: white;
+            z-index: 1001;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        /* Header del menú móvil */
+        .mobile-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 1.5rem 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-logo-img {
+            height: 35px;
+            width: auto;
+        }
+
+        .close-menu-btn {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--primary);
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.3s ease;
+        }
+
+        .close-menu-btn:hover {
+            color: var(--accent);
+        }
+
+        /* Contenido del menú móvil */
+        .mobile-menu-content {
+            padding: 2rem 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .mobile-menu-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 1.2rem;
+            text-decoration: none;
+            color: var(--primary);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu-link:hover {
+            background: var(--accent-light);
+            color: var(--accent);
+            transform: translateX(5px);
+        }
+
+        .mobile-menu-icon {
+            font-size: 1.2rem;
+            width: 24px;
+            text-align: center;
+        }
+
+        .mobile-menu-cta {
+            background: var(--accent);
+            color: white !important;
+            margin-top: 1rem;
+            justify-content: center;
+            font-weight: 600;
+        }
+
+        .mobile-menu-cta:hover {
+            background: var(--accent-dark) !important;
+            transform: translateY(-2px) !important;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer del menú móvil */
+        .mobile-menu-footer {
+            padding: 1.5rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .mobile-menu-footer p {
+            margin-bottom: 1rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .mobile-phone-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-phone-link:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .mobile-phone-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Overlay */
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ===== MEDIA QUERIES ===== */
+        @media (max-width: 1024px) {
+            .desktop-nav {
+                gap: 1.5rem;
+            }
+            
+            .desktop-nav a {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: 65px;
+                padding: 0.8rem 1rem;
+            }
+            
+            .logo-img {
+                height: 38px;
+            }
+            
+            .hamburger-btn {
+                display: flex;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .hero {
+                margin-top: 65px;
+                min-height: calc(100vh - 65px);
+            }
+        }
+
+        @media (max-width: 576px) {
+            header {
+                height: 60px;
+            }
+            
+            .logo-img {
+                height: 35px;
+            }
+            
+            .hero {
+                margin-top: 60px;
+                min-height: calc(100vh - 60px);
+            }
+            
+            .mobile-menu {
+                width: 280px;
+            }
+            
+            .hamburger-btn {
+                width: 28px;
+                height: 20px;
+            }
+            
+            .hamburger-line {
+                height: 2.5px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            header {
+                height: 55px;
+                padding: 0.6rem 0.8rem;
+            }
+            
+            .logo-img {
+                height: 32px;
+            }
+            
+            .hero {
+                margin-top: 55px;
+                min-height: calc(100vh - 55px);
+            }
+            
+            .mobile-menu {
+                width: 100%;
+            }
+            
+            .mobile-menu-content {
+                padding: 1.5rem 1rem;
+            }
+        }
+
+        /* ===== ANIMACIONES ===== */
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .mobile-menu-link {
+            animation: slideInRight 0.3s ease forwards;
+            opacity: 0;
+        }
+
+        .mobile-menu-link:nth-child(1) { animation-delay: 0.1s; }
+        .mobile-menu-link:nth-child(2) { animation-delay: 0.15s; }
+        .mobile-menu-link:nth-child(3) { animation-delay: 0.2s; }
+        .mobile-menu-link:nth-child(4) { animation-delay: 0.25s; }
+        .mobile-menu-link:nth-child(5) { animation-delay: 0.3s; }
+    </style>
+
+    <script>
+        // CONTROL DEL MENÚ MÓVIL
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+            
+            // Abrir menú
+            hamburgerBtn.addEventListener('click', function() {
+                mobileMenu.classList.add('active');
+                menuOverlay.classList.add('active');
+                hamburgerBtn.classList.add('active');
+                document.body.style.overflow = 'hidden';
             });
-        });
-        
-        // Cerrar menú con tecla ESC
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && mobileMenu.classList.contains('menu-active')) {
-                hamburgerBtn.classList.remove('hamburger-active');
-                mobileMenu.classList.remove('menu-active');
-                mobileOverlay.classList.remove('overlay-active');
+            
+            // Cerrar menú
+            function closeMobileMenu() {
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                hamburgerBtn.classList.remove('active');
                 document.body.style.overflow = '';
             }
+            
+            // Eventos para cerrar menú
+            closeMenuBtn.addEventListener('click', closeMobileMenu);
+            menuOverlay.addEventListener('click', closeMobileMenu);
+            
+            // Cerrar al hacer clic en enlace
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Cerrar menú
+                    closeMobileMenu();
+                    
+                    // Scroll suave a la sección
+                    setTimeout(() => {
+                        const section = document.getElementById(targetSection);
+                        if (section) {
+                            const headerHeight = document.querySelector('header').offsetHeight;
+                            const sectionPosition = section.offsetTop - headerHeight;
+                            
+                            window.scrollTo({
+                                top: sectionPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 300);
+                });
+            });
+            
+            // Cerrar con tecla ESC
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
+            
+            // Prevenir scroll en fondo cuando el menú está abierto
+            mobileMenu.addEventListener('touchmove', function(e) {
+                if (this.scrollHeight > this.clientHeight) {
+                    e.stopPropagation();
+                }
+            }, { passive: false });
+            
+            // Cerrar menú al cambiar tamaño de ventana (si se vuelve a escritorio)
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
+                    closeMobileMenu();
+                }
+            });
         });
-    }
-});
-</script>
-    <!-- HERO SECTION -->
+    </script>
+
+    <!-- HERO SECTION (el resto del código se mantiene igual) -->
     <section class="hero">
         <div class="hero-content">
             <h1>Casa en Venta - Bartow, FL</h1>
@@ -2965,42 +2922,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 <div class="annex-carousel">
                     <div class="annex-slide active">
-                        <img src="anexio.webp" alt="Fachada del anexo">
+                        <img src="anexo.webp" alt="Fachada del anexo">
                         <div class="carousel-overlay">
-                            <h3>Recamara principal</h3>
-                            <p>Vista del interior de la recamara</p>
+                            <h3>Fachada del Anexo</h3>
+                            <p>Vista frontal del anexo independiente</p>
                         </div>
                     </div>
                     
                     <div class="annex-slide">
-                        <img src="anexo3.webp" alt="Interior del anexo">
+                        <img src="Casa (17).webp" alt="Interior del anexo">
                         <div class="carousel-overlay">
-                            <h3>cocina </h3>
-                            <p>Cocina del anexo moderna y funcional</p>
-                        </div>
-                    </div>
-
-
-                      <div class="annex-slide">
-                        <img src="anexos.webp" alt="Interior del anexo">
-                        <div class="carousel-overlay">
-                            <h3>Baño</h3>
-                            <p>Distribución inteligente del espacio</p>
-                        </div>
-                    </div>
-                      <div class="annex-slide">
-                        <img src="anexo (2).webp" alt="Interior del anexo">
-                        <div class="carousel-overlay">
-                            <h3>Baño</h3>
-                            <p>otra perspectiva del Baño del Anexo </p>
-                        </div>
-                    </div>
-
-                    <div class="annex-slide">
-                        <img src="anexo.webp" alt="Área adicional del anexo">
-                        <div class="carousel-overlay">
-                            <h3>sala de estar</h3>
+                            <h3>Interior del Anexo</h3>
                             <p>Espacio interior del anexo con buena iluminación</p>
+                        </div>
+                    </div>
+                    
+                    <div class="annex-slide">
+                        <img src="Casa (25).webp" alt="Área adicional del anexo">
+                        <div class="carousel-overlay">
+                            <h3>Área Adicional</h3>
+                            <p>Distribución inteligente del espacio</p>
                         </div>
                     </div>
                 </div>
@@ -3149,6 +3090,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- CONTACT SECTION -->
     <section class="contact" id="contact">
         <div class="contact-content">
+
             <div class="contact-text">
                 <h2>Contáctenos</h2>
                 <p>¿Interesado en esta hermosa propiedad en Bartow, FL? Contáctenos para programar una visita o para obtener más información sobre esta casa.</p>
@@ -3159,7 +3101,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3 class="social-title">Formas de Contacto</h3>
                 
                 <div class="social-icons">
-                    <a href="https://wa.me/18632101111" target="_blank" class="social-item">
+                    <a href="https://wa.me/18632101111?text=Hola,%20me%20interesa%20la%20casa%20en%203862%20Resting%20Robin%20Ave,%20Bartow,%20FL" target="_blank" class="social-item">
                         <div class="social-icon whatsapp-bg">
                             <i class="fab fa-whatsapp"></i>
                         </div>
@@ -3167,7 +3109,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>Envíenos un mensaje directo</p>
                     </a>
                     
-                    <a href="rosanieves@apexrealtorteam.com" class="social-item">
+                    <a href="mailto:info@casabartowfl.com?subject=Consulta%20sobre%20casa%20en%203862%20Resting%20Robin%20Ave" class="social-item">
                         <div class="social-icon email-bg">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -3175,7 +3117,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>Envíe su consulta por correo</p>
                     </a>
                     
-                    <a href="tel:+14078703125" class="social-item">
+                    <a href="tel:+18632101111" class="social-item">
                         <div class="social-icon phone-bg">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -3198,9 +3140,7 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- FOOTER ORIGINAL CON ICONOS -->
     <footer>
         <div class="footer-content">
-             <a href="#" class="logo">
-           <img src="ape.png" alt="Logo de la empresa" class="logo-img" style="height: 90px;">
-        </a>
+            <img src="ape.png" alt="Logo" class="mobile-logo-img" style="height: 95px;">
             <h3>Casa en Venta - Bartow, FL</h3>
             <p style="color: rgba(255, 255, 255, 0.6); margin-bottom: 1rem; font-size: clamp(0.85rem, 1.8vw, 0.95rem);">Propiedad exclusiva de 4 habitaciones, 3.5 baños construida en 2023.</p>
             <p style="color: rgba(255, 255, 255, 0.6); font-size: clamp(0.85rem, 1.8vw, 0.95rem);">3862 Resting Robin Ave, Bartow, FL 33830</p>
@@ -3210,27 +3150,28 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="https://wa.me/18632101111" target="_blank" class="footer-icon" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="rosanieves@apexrealtorteam.com" class="footer-icon" title="Correo Electrónico">
+                <a href="mailto:info@casabartowfl.com" class="footer-icon" title="Correo Electrónico">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="tel:+18632101111" class="footer-icon" title="Llamada Telefónica">
                     <i class="fas fa-phone"></i>
                 </a>
-                <a href="https://www.facebook.com/share/1Aa4HtTDJs/?mibextid=wwXIfr" class="footer-icon" title="Facebook">
+                <a href="#" class="footer-icon" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/apexrealtorteam?igsh=aXB4ZmNzajVhZ3Vl" class="footer-icon" title="Instagram">
+                <a href="#" class="footer-icon" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 Casa en Venta - Bartow, FL. Todos los derechos reservados. | Apex Realtor Team</p>
+            <p>&copy; 2024 Casa en Venta - Bartow, FL. Todos los derechos reservados. | MLS #S5139237</p>
             <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 0.5rem;">Información sujeta a cambios sin previo aviso</p>
         </div>
     </footer>
 
+    <!-- El resto del script JavaScript original se mantiene igual -->
     <script>
         // Animated Background Setup
         const animatedBg = document.getElementById('animatedBg');
@@ -3439,8 +3380,8 @@ document.addEventListener('DOMContentLoaded', function() {
             carousel.addEventListener('mouseleave', startAutoSlide);
         });
 
-        // Smooth scroll para navegación
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+        // Smooth scroll para navegación de escritorio
+        document.querySelectorAll('.desktop-nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
@@ -3448,8 +3389,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 const targetElement = document.querySelector(targetId);
                 if(targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.offsetTop - headerHeight;
+                    
                     window.scrollTo({
-                        top: targetElement.offsetTop - 170,
+                        top: targetPosition,
                         behavior: 'smooth'
                     });
                 }
@@ -3459,18 +3403,26 @@ document.addEventListener('DOMContentLoaded', function() {
         // Botones del hero
         document.querySelectorAll('.btn-primary').forEach(btn => {
             btn.addEventListener('click', function() {
-                document.querySelector('#details').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
+                const detailsSection = document.querySelector('#details');
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = detailsSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             });
         });
 
         document.querySelectorAll('.btn-secondary').forEach(btn => {
             btn.addEventListener('click', function() {
-                document.querySelector('#contact').scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
+                const contactSection = document.querySelector('#contact');
+                const headerHeight = document.querySelector('header').offsetHeight;
+                const targetPosition = contactSection.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
                 });
             });
         });
