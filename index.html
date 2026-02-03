@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CASA EN VENTA - 3862 Resting Robin Ave, Bartow, FL</title>
     <style>
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -99,7 +99,7 @@ header {
 }
 
 .logo-img {
-    height: 45px;
+    height: 85px;
     width: auto;
     object-fit: contain;
 }
@@ -603,7 +603,8 @@ nav a:hover::after {
 
 /* Contenedores de carrusel */
 .exterior-carousel-container,
-.interior-carousel-container {
+.interior-carousel-container,
+.annex-carousel-container {
     position: relative;
     width: 100%;
     border-radius: 24px;
@@ -613,12 +614,12 @@ nav a:hover::after {
     padding: 3rem;
     margin-bottom: 2rem;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .exterior-carousel-container:hover,
-.interior-carousel-container:hover {
+.interior-carousel-container:hover,
+.annex-carousel-container:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
     border-color: rgba(0, 102, 204, 0.1);
@@ -626,7 +627,8 @@ nav a:hover::after {
 
 /* Títulos de carrusel */
 .exterior-title,
-.interior-title {
+.interior-title,
+.annex-title {
     text-align: center;
     font-size: 1.8rem;
     color: var(--primary);
@@ -637,7 +639,8 @@ nav a:hover::after {
 }
 
 .exterior-title::after,
-.interior-title::after {
+.interior-title::after,
+.annex-title::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -649,12 +652,13 @@ nav a:hover::after {
     border-radius: 2px;
 }
 
-/* Carruseles */
+/* ===== CARRUSELES CON MAYOR ALTURA (MEJORADA) ===== */
 .exterior-carousel,
-.interior-carousel {
+.interior-carousel,
+.annex-carousel {
     position: relative;
     width: 100%;
-    height: 550px;
+    height: 700px; /* Aumentado significativamente para mejor proporción */
     display: flex;
     overflow: hidden;
     border-radius: 16px;
@@ -663,7 +667,8 @@ nav a:hover::after {
 }
 
 .exterior-slide,
-.interior-slide {
+.interior-slide,
+.annex-slide {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -675,13 +680,15 @@ nav a:hover::after {
 }
 
 .exterior-slide.active,
-.interior-slide.active {
+.interior-slide.active,
+.annex-slide.active {
     opacity: 1;
     position: relative;
 }
 
 .exterior-slide img,
-.interior-slide img {
+.interior-slide img,
+.annex-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -691,7 +698,8 @@ nav a:hover::after {
 }
 
 .exterior-slide.active img,
-.interior-slide.active img {
+.interior-slide.active img,
+.annex-slide.active img {
     transform: scale(1.05);
 }
 
@@ -701,29 +709,77 @@ nav a:hover::after {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
     padding: 2.5rem;
     color: white;
     transform: translateY(0);
     opacity: 1;
-    
 }
 
 .carousel-overlay h3 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     margin-bottom: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+    
+    /* Sombreado de texto mejorado */
+    text-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.8),
+        0 2px 10px rgba(0, 0, 0, 0.9),
+        0 3px 20px rgba(0, 0, 0, 0.6);
+    
+    display: inline-block;
+    padding: 1rem 1.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .carousel-overlay p {
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 1rem;
     line-height: 1.6;
     font-weight: 300;
     max-width: 600px;
+    
+    /* Sombreado de texto mejorado */
+    text-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.7),
+        0 2px 8px rgba(0, 0, 0, 0.8),
+        0 3px 15px rgba(0, 0, 0, 0.5);
+    
+    display: inline-block;
+    padding: 1rem 1.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px) saturate(180%);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
+
+/* Efecto hover para más interacción */
+.carousel-overlay h3:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    text-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.9),
+      
+}
+
+.carousel-overlay p:hover {
+    background: rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    text-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.8),
+       
+}
+
 
 /* Características mejoradas */
 .property-features {
@@ -750,7 +806,8 @@ nav a:hover::after {
 
 /* Botones de navegación mejorados */
 .exterior-nav,
-.interior-nav {
+.interior-nav,
+.annex-nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -772,7 +829,8 @@ nav a:hover::after {
 }
 
 .exterior-nav:hover,
-.interior-nav:hover {
+.interior-nav:hover,
+.annex-nav:hover {
     background: white;
     transform: translateY(-50%) scale(1.15);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
@@ -781,18 +839,21 @@ nav a:hover::after {
 }
 
 .exterior-prev,
-.interior-prev {
+.interior-prev,
+.annex-prev {
     left: 20px;
 }
 
 .exterior-next,
-.interior-next {
+.interior-next,
+.annex-next {
     right: 20px;
 }
 
 /* Dots mejorados */
 .exterior-dots,
-.interior-dots {
+.interior-dots,
+.annex-dots {
     position: absolute;
     bottom: 25px;
     left: 50%;
@@ -803,7 +864,8 @@ nav a:hover::after {
 }
 
 .exterior-dot,
-.interior-dot {
+.interior-dot,
+.annex-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -814,7 +876,8 @@ nav a:hover::after {
 }
 
 .exterior-dot.active,
-.interior-dot.active {
+.interior-dot.active,
+.annex-dot.active {
     background: white;
     width: 36px;
     border-radius: 6px;
@@ -1105,7 +1168,7 @@ nav a:hover::after {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
-    align-items: center;
+    align-items: start; /* Cambiado de 'center' a 'start' */
 }
 
 @media (max-width: 768px) {
@@ -1120,6 +1183,7 @@ nav a:hover::after {
     animation: fadeInUp 0.8s ease-out 0.5s both;
     position: relative;
     padding-bottom: 1rem;
+    margin-top: 0; /* Asegurar que no tenga margen superior */
 }
 
 .contact-text h2::after {
@@ -1364,15 +1428,32 @@ footer::before {
     line-height: 1.6;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE CON ALTURAS AJUSTADAS ===== */
+@media (max-width: 1600px) {
+    .exterior-carousel,
+    .interior-carousel,
+    .annex-carousel {
+        height: 650px; /* Un poco más bajo para pantallas grandes */
+    }
+}
+
+@media (max-width: 1400px) {
+    .exterior-carousel,
+    .interior-carousel,
+    .annex-carousel {
+        height: 600px; /* Altura óptima para la mayoría de monitores */
+    }
+}
+
 @media (max-width: 1200px) {
     .carousel-section {
         padding: 5rem 1.5rem;
     }
     
     .exterior-carousel,
-    .interior-carousel {
-        height: 450px;
+    .interior-carousel,
+    .annex-carousel {
+        height: 550px; /* Buen balance para laptops */
     }
     
     .hero {
@@ -1407,6 +1488,12 @@ footer::before {
         padding: 1rem 2.2rem;
         font-size: 1rem;
     }
+    
+    .exterior-carousel,
+    .interior-carousel,
+    .annex-carousel {
+        height: 500px; /* Buena altura para tablets */
+    }
 }
 
 @media (max-width: 768px) {
@@ -1431,7 +1518,7 @@ footer::before {
     }
 
     .logo-img {
-        height: 35px;
+        height: 65px;
     }
 
     .hero {
@@ -1483,12 +1570,14 @@ footer::before {
     }
 
     .exterior-carousel-container,
-    .interior-carousel-container {
+    .interior-carousel-container,
+    .annex-carousel-container {
         padding: 1.8rem;
     }
     
     .exterior-title,
-    .interior-title {
+    .interior-title,
+    .annex-title {
         font-size: 1.5rem;
         margin-bottom: 1rem;
     }
@@ -1499,8 +1588,9 @@ footer::before {
     }
     
     .exterior-carousel,
-    .interior-carousel {
-        height: 350px;
+    .interior-carousel,
+    .annex-carousel {
+        height: 450px; /* Excelente altura para tablets pequeñas */
     }
     
     .carousel-overlay {
@@ -1508,15 +1598,16 @@ footer::before {
     }
     
     .carousel-overlay h3 {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     
     .carousel-overlay p {
-        font-size: 0.95rem;
+        font-size: 1.05rem;
     }
     
     .exterior-nav,
-    .interior-nav {
+    .interior-nav,
+    .annex-nav {
         width: 44px;
         height: 44px;
         font-size: 1.2rem;
@@ -1595,7 +1686,7 @@ footer::before {
     }
 
     .logo-img {
-        height: 30px;
+        height: 50px;
     }
 
     .cta-button {
@@ -1642,18 +1733,19 @@ footer::before {
     }
     
     .exterior-carousel,
-    .interior-carousel {
-        height: 300px;
+    .interior-carousel,
+    .annex-carousel {
+        height: 400px; /* Buena altura para móviles grandes */
     }
     
     .carousel-overlay h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.4rem;
+        font-size: 1.4rem;
+        margin-bottom: 0.6rem;
     }
     
     .carousel-overlay p {
-        font-size: 0.9rem;
-        margin-bottom: 0.6rem;
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
     }
     
     .feature-tag {
@@ -1666,24 +1758,28 @@ footer::before {
     }
 
     .exterior-carousel-container,
-    .interior-carousel-container {
+    .interior-carousel-container,
+    .annex-carousel-container {
         padding: 1.5rem;
     }
 
     .exterior-nav,
-    .interior-nav {
+    .interior-nav,
+    .annex-nav {
         width: 38px;
         height: 38px;
         font-size: 1.1rem;
     }
 
     .exterior-prev,
-    .interior-prev {
+    .interior-prev,
+    .annex-prev {
         left: 10px;
     }
 
     .exterior-next,
-    .interior-next {
+    .interior-next,
+    .annex-next {
         right: 10px;
     }
 
@@ -1692,20 +1788,23 @@ footer::before {
     }
 
     .exterior-dots,
-    .interior-dots {
+    .interior-dots,
+    .annex-dots {
         bottom: 15px;
         gap: 8px;
     }
 
     .exterior-dot,
-    .interior-dot {
+    .interior-dot,
+    .annex-dot {
         width: 10px;
         height: 10px;
         border-width: 1.5px;
     }
 
     .exterior-dot.active,
-    .interior-dot.active {
+    .interior-dot.active,
+    .annex-dot.active {
         width: 28px;
     }
 
@@ -1762,6 +1861,26 @@ footer::before {
     }
 }
 
+@media (max-width: 480px) {
+    .exterior-carousel,
+    .interior-carousel,
+    .annex-carousel {
+        height: 350px; /* Altura para móviles medianos */
+    }
+    
+    .carousel-overlay {
+        padding: 1rem;
+    }
+    
+    .carousel-overlay h3 {
+        font-size: 1.3rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 400px) {
     header {
         height: 50px;
@@ -1780,8 +1899,9 @@ footer::before {
     }
     
     .exterior-carousel,
-    .interior-carousel {
-        height: 250px;
+    .interior-carousel,
+    .annex-carousel {
+        height: 320px; /* Altura óptima para móviles pequeños */
     }
     
     .carousel-overlay {
@@ -1789,11 +1909,11 @@ footer::before {
     }
     
     .carousel-overlay h3 {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     .carousel-overlay p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
     }
     
     .stats-container {
@@ -1829,6 +1949,22 @@ footer::before {
     }
 }
 
+@media (max-width: 360px) {
+    .exterior-carousel,
+    .interior-carousel,
+    .annex-carousel {
+        height: 300px; /* Mínimo recomendado para pantallas muy pequeñas */
+    }
+    
+    .carousel-overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 0.85rem;
+    }
+}
+
 /* Smooth transitions */
 * {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -1860,6 +1996,247 @@ footer::before {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(135deg, #0052a3, #3a7bc8);
 }
+    </style>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg" id="animatedBg"></div>
+
+    <!-- Menú móvil -->
+    <style>
+      /* ===== HEADER RESPONSIVE MEJORADO ===== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        padding: 0.8rem 1.5rem; /* Reducido en mobile */
+        z-index: 1000;
+        border-bottom: 1px solid var(--border);
+        height: 60px; /* Fijo en mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: slideDown 0.8s ease-out;
+    }
+
+    .header-content {
+        max-width: 1400px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* ===== LOGO RESPONSIVE ===== */
+  
+
+
+    /* ===== BOTÓN HAMBURGUESA ===== */
+    .hamburger-menu-btn {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 24px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 1002;
+        position: relative;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    .hamburger-menu-line {
+        width: 100%;
+        height: 3px;
+        background: var(--accent);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        transform-origin: center;
+    }
+
+    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-menu-btn.hamburger-active .hamburger-menu-line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* ===== HERO AJUSTADO ===== */
+    .hero {
+        margin-top: 60px; /* Igual que altura del header */
+        min-height: calc(100vh - 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(26, 26, 26, 0.7), rgba(26, 26, 26, 0.8)), 
+                    url('CASITA.jpg') center/cover no-repeat;
+        padding: 2rem 1rem;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* ===== MEDIA QUERIES PARA MOBILE ===== */
+    @media (max-width: 768px) {
+        .hamburger-menu-btn {
+            display: flex;
+        }
+        
+        nav {
+            display: none !important;
+        }
+        
+        /* Header más compacto */
+        header {
+            height: 55px;
+            padding: 0.6rem 1rem;
+        }
+        
+        /* Hero ajustado al header */
+        .hero {
+            margin-top: 55px;
+            min-height: calc(100vh - 55px);
+            padding: 1.5rem 1rem;
+        }
+        
+        /* Logo más pequeño */
+        .logo-img {
+            height: 35px;
+        }
+        
+        .logo-text {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 576px) {
+        header {
+            height: 50px;
+            padding: 0.5rem 0.8rem;
+        }
+        
+        .hero {
+            margin-top: 50px;
+            min-height: calc(100vh - 50px);
+            padding: 1rem;
+        }
+        
+        .logo-img {
+            height: 30px;
+        }
+        
+        .hamburger-menu-btn {
+            width: 28px;
+            height: 20px;
+        }
+        
+        .hamburger-menu-line {
+            height: 2.5px;
+        }
+    }
+
+    @media (max-width: 400px) {
+        header {
+            height: 48px;
+        }
+        
+        .hero {
+            margin-top: 48px;
+        }
+        
+        .logo-img {
+            height: 28px;
+        }
+        
+        .hamburger-menu-btn {
+            width: 26px;
+            height: 18px;
+        }
+    }
+
+    /* ===== MENÚ MÓVIL (igual que antes) ===== */
+    .mobile-nav-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        z-index: 999;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    .mobile-nav-overlay.overlay-active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        z-index: 1000;
+        padding: 70px 1.5rem 2rem; /* Top padding reducido */
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        transition: right 0.4s ease;
+        box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+        border-left: 1px solid var(--border);
+        overflow-y: auto;
+    }
+    .mobile-nav-menu.menu-active {
+        right: 0;
+    }
+
+    .mobile-nav-link {
+        text-decoration: none;
+        color: var(--primary);
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+    .mobile-nav-link:hover {
+        color: var(--accent);
+        background: var(--accent-light);
+    }
+
+    .mobile-nav-cta {
+        background: var(--accent);
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: 2px solid var(--accent);
+        text-align: center;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .mobile-nav-cta:hover {
+        background: transparent;
+        color: var(--accent);
+    }
+
     </style>
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -2119,11 +2496,12 @@ footer::before {
     <header>
         <div class="header-content">
         <a href="#" class="logo">
-            <img src="apex.png" alt="Logo de la empresa" class="logo-img">
+            <img src="apex.png" alt="Logo de la empresa" style="height: 60px;"class="logo-img">
         </a>
         <nav>
             <a href="#exterior">Exterior</a>
             <a href="#interior">Interior</a>
+            <a href="#annex">Anexo</a>
             <a href="#details">Detalles</a>
             <a href="#contact" class="cta-button">Contactar</a>
         </nav>
@@ -2141,9 +2519,9 @@ footer::before {
 <div class="mobile-nav-menu" id="mobileMenu">
     <a href="#exterior" class="mobile-nav-link">Exterior</a>
     <a href="#interior" class="mobile-nav-link">Interior</a>
-    <a href="#detalles" class="mobile-nav-link">Detalles</a>
-    <a href="#contacto" class="mobile-nav-link">Contactar</a>
-    <a href="#" class="mobile-nav-cta">Contactar Ahora</a>
+    <a href="#annex" class="mobile-nav-link">Anexo</a>
+    <a href="#details" class="mobile-nav-link">Detalles</a>
+    <a href="#contact" class="mobile-nav-cta">Contactar Ahora</a>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -2512,53 +2890,64 @@ document.addEventListener('DOMContentLoaded', function() {
                     <!-- Puntos generados dinámicamente -->
                 </div>
             </div>
-        </div>
-        
-    </section>
-  <section class="carousel-section" id="features">
-        
-        
-        <div class="properties-container">
-            <!-- Carrusel de Exteriores -->
-            <div class="exterior-carousel-container" id="exterior">
-                <h3 class="exterior-title">Anexo</h3>
+
+            <!-- Carrusel de Anexo -->
+            <div class="annex-carousel-container" id="annex">
+                <h3 class="annex-title">Anexo</h3>
                 <p class="area-description">1 cuarto 1 baño sala cocina y walking closet</p>
                 
-                <div class="exterior-carousel">
-                    <!-- Imágenes 1-10: Fachada y exteriores -->
-                    <div class="exterior-slide active">
-                        <img src="anexo.webp" alt="Fachada frontal de la casa">
+                <div class="annex-carousel">
+                    <div class="annex-slide active">
+                        <img src="anexio.webp" alt="Fachada del anexo">
                         <div class="carousel-overlay">
-                            <h3>Fachada Principal</h3>
-                            <p>Vista frontal de la residencia con diseño moderno</p>
-                        </div>
-                    </div>
-                     <div class="interior-slide">
-                        <img src="Casa (17).webp" alt="Vista adicional">
-                        <div class="carousel-overlay">
-                            <h3>Vista Adicional 8</h3>
-                            <p>Iluminación natural</p>
+                            <h3>Recamara principal</h3>
+                            <p>Vista del interior de la recamara</p>
                         </div>
                     </div>
                     
-                    <div class="interior-slide">
-                        <img src="Casa (25).webp" alt="Vista adicional">
+                    <div class="annex-slide">
+                        <img src="anexo3.webp" alt="Interior del anexo">
                         <div class="carousel-overlay">
-                            <h3>Vista Adicional 9</h3>
-                            <p>Distribución inteligente</p>
+                            <h3>cocina </h3>
+                            <p>Cocina del anexo moderna y funcional</p>
+                        </div>
+                    </div>
+
+
+                      <div class="annex-slide">
+                        <img src="anexos.webp" alt="Interior del anexo">
+                        <div class="carousel-overlay">
+                            <h3>Baño</h3>
+                            <p>Distribución inteligente del espacio</p>
+                        </div>
+                    </div>
+                      <div class="annex-slide">
+                        <img src="anexo (2).webp" alt="Interior del anexo">
+                        <div class="carousel-overlay">
+                            <h3>Baño</h3>
+                            <p>otra perspectiva del Baño del Anexo </p>
+                        </div>
+                    </div>
+
+                    <div class="annex-slide">
+                        <img src="anexo.webp" alt="Área adicional del anexo">
+                        <div class="carousel-overlay">
+                            <h3>sala de estar</h3>
+                            <p>Espacio interior del anexo con buena iluminación</p>
                         </div>
                     </div>
                 </div>
                 
-                <button class="interior-nav interior-prev" onclick="moveInteriorSlide(-1)">❮</button>
-                <button class="interior-nav interior-next" onclick="moveInteriorSlide(1)">❯</button>
+                <button class="annex-nav annex-prev" onclick="moveAnnexSlide(-1)">❮</button>
+                <button class="annex-nav annex-next" onclick="moveAnnexSlide(1)">❯</button>
                 
-                <div class="interior-dots">
+                <div class="annex-dots">
                     <!-- Puntos generados dinámicamente -->
                 </div>
             </div>
         </div>
-                        </section>
+    </section>
+
     <!-- Detalles de la Propiedad -->
     <div class="property-details" id="details">
         <div class="property-header">
@@ -2703,7 +3092,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3 class="social-title">Formas de Contacto</h3>
                 
                 <div class="social-icons">
-                    <a href="https://wa.me/18632101111?text=Hola,%20me%20interesa%20la%20casa%20en%203862%20Resting%20Robin%20Ave,%20Bartow,%20FL" target="_blank" class="social-item">
+                    <a href="https://wa.me/18632101111" target="_blank" class="social-item">
                         <div class="social-icon whatsapp-bg">
                             <i class="fab fa-whatsapp"></i>
                         </div>
@@ -2711,7 +3100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>Envíenos un mensaje directo</p>
                     </a>
                     
-                    <a href="mailto:info@casabartowfl.com?subject=Consulta%20sobre%20casa%20en%203862%20Resting%20Robin%20Ave" class="social-item">
+                    <a href="rosanieves@apexrealtorteam.com" class="social-item">
                         <div class="social-icon email-bg">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -2719,7 +3108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p>Envíe su consulta por correo</p>
                     </a>
                     
-                    <a href="tel:+18632101111" class="social-item">
+                    <a href="tel:+14078703125" class="social-item">
                         <div class="social-icon phone-bg">
                             <i class="fas fa-phone"></i>
                         </div>
@@ -2742,6 +3131,9 @@ document.addEventListener('DOMContentLoaded', function() {
     <!-- FOOTER ORIGINAL CON ICONOS -->
     <footer>
         <div class="footer-content">
+             <a href="#" class="logo">
+           <img src="ape.png" alt="Logo de la empresa" class="logo-img" style="height: 90px;">
+        </a>
             <h3>Casa en Venta - Bartow, FL</h3>
             <p style="color: rgba(255, 255, 255, 0.6); margin-bottom: 1rem; font-size: clamp(0.85rem, 1.8vw, 0.95rem);">Propiedad exclusiva de 4 habitaciones, 3.5 baños construida en 2023.</p>
             <p style="color: rgba(255, 255, 255, 0.6); font-size: clamp(0.85rem, 1.8vw, 0.95rem);">3862 Resting Robin Ave, Bartow, FL 33830</p>
@@ -2751,23 +3143,23 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="https://wa.me/18632101111" target="_blank" class="footer-icon" title="WhatsApp">
                     <i class="fab fa-whatsapp"></i>
                 </a>
-                <a href="mailto:info@casabartowfl.com" class="footer-icon" title="Correo Electrónico">
+                <a href="rosanieves@apexrealtorteam.com" class="footer-icon" title="Correo Electrónico">
                     <i class="fas fa-envelope"></i>
                 </a>
                 <a href="tel:+18632101111" class="footer-icon" title="Llamada Telefónica">
                     <i class="fas fa-phone"></i>
                 </a>
-                <a href="#" class="footer-icon" title="Facebook">
+                <a href="https://www.facebook.com/share/1Aa4HtTDJs/?mibextid=wwXIfr" class="footer-icon" title="Facebook">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="#" class="footer-icon" title="Instagram">
+                <a href="https://www.instagram.com/apexrealtorteam?igsh=aXB4ZmNzajVhZ3Vl" class="footer-icon" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 Casa en Venta - Bartow, FL. Todos los derechos reservados. | MLS #S5139237</p>
+            <p>&copy; 2024 Casa en Venta - Bartow, FL. Todos los derechos reservados. | Apex Realtor Team</p>
             <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 0.5rem;">Información sujeta a cambios sin previo aviso</p>
         </div>
     </footer>
@@ -2802,14 +3194,17 @@ document.addEventListener('DOMContentLoaded', function() {
         // Variables para los carruseles
         let currentExteriorSlideIndex = 0;
         let currentInteriorSlideIndex = 0;
+        let currentAnnexSlideIndex = 0;
         let exteriorSlides = document.querySelectorAll('.exterior-slide');
         let interiorSlides = document.querySelectorAll('.interior-slide');
-        let exteriorInterval, interiorInterval;
+        let annexSlides = document.querySelectorAll('.annex-slide');
+        let exteriorInterval, interiorInterval, annexInterval;
 
         // Inicializar puntos para carruseles
         function initializeDots() {
             const exteriorDots = document.querySelector('.exterior-dots');
             const interiorDots = document.querySelector('.interior-dots');
+            const annexDots = document.querySelector('.annex-dots');
             
             // Puntos para carrusel exterior
             exteriorDots.innerHTML = '';
@@ -2829,9 +3224,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 interiorDots.appendChild(dot);
             });
             
+            // Puntos para carrusel del anexo
+            annexDots.innerHTML = '';
+            annexSlides.forEach((_, index) => {
+                const dot = document.createElement('span');
+                dot.className = 'annex-dot';
+                dot.onclick = () => currentAnnexSlide(index);
+                annexDots.appendChild(dot);
+            });
+            
             // Mostrar slides iniciales
             showExteriorSlide(currentExteriorSlideIndex);
             showInteriorSlide(currentInteriorSlideIndex);
+            showAnnexSlide(currentAnnexSlideIndex);
             
             // Iniciar auto-avance
             startAutoSlide();
@@ -2903,10 +3308,44 @@ document.addEventListener('DOMContentLoaded', function() {
             dots[currentInteriorSlideIndex].classList.add('active');
         }
 
+        // Funciones para carrusel del anexo
+        function moveAnnexSlide(n) {
+            showAnnexSlide(currentAnnexSlideIndex += n);
+        }
+
+        function currentAnnexSlide(n) {
+            showAnnexSlide(currentAnnexSlideIndex = n);
+        }
+
+        function showAnnexSlide(n) {
+            const slides = document.querySelectorAll('.annex-slide');
+            const dots = document.querySelectorAll('.annex-dot');
+
+            if (n >= slides.length) {
+                currentAnnexSlideIndex = 0;
+            }
+            if (n < 0) {
+                currentAnnexSlideIndex = slides.length - 1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+                slide.querySelector('img').style.transform = 'scale(1)';
+            });
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            slides[currentAnnexSlideIndex].classList.add('active');
+            setTimeout(() => {
+                slides[currentAnnexSlideIndex].querySelector('img').style.transform = 'scale(1.05)';
+            }, 50);
+            dots[currentAnnexSlideIndex].classList.add('active');
+        }
+
         // Auto-avance de carruseles con pausa al hover
         function startAutoSlide() {
             if (exteriorInterval) clearInterval(exteriorInterval);
             if (interiorInterval) clearInterval(interiorInterval);
+            if (annexInterval) clearInterval(annexInterval);
             
             exteriorInterval = setInterval(() => {
                 moveExteriorSlide(1);
@@ -2915,15 +3354,20 @@ document.addEventListener('DOMContentLoaded', function() {
             interiorInterval = setInterval(() => {
                 moveInteriorSlide(1);
             }, 4500);
+
+            annexInterval = setInterval(() => {
+                moveAnnexSlide(1);
+            }, 4000);
         }
 
         function pauseAutoSlide() {
             if (exteriorInterval) clearInterval(exteriorInterval);
             if (interiorInterval) clearInterval(interiorInterval);
+            if (annexInterval) clearInterval(annexInterval);
         }
 
         // Event listeners para pausar/reanudar auto-avance
-        document.querySelectorAll('.exterior-carousel, .interior-carousel').forEach(carousel => {
+        document.querySelectorAll('.exterior-carousel, .interior-carousel, .annex-carousel').forEach(carousel => {
             carousel.addEventListener('mouseenter', pauseAutoSlide);
             carousel.addEventListener('mouseleave', startAutoSlide);
         });
